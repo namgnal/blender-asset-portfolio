@@ -1,0 +1,865 @@
+{
+  "schemaVersion": 1,
+  "author": "namgnal",
+  "defaultCollection": "orbital-rescue",
+  "defaultAsset": "kestrel_rescue_ship",
+  "collections": [
+    {
+      "id": "orbital-rescue",
+      "title": "太空幸存者",
+      "eyebrow": "SPACE SURVIVOR",
+      "status": "回收与撤离资产",
+      "description": "围绕搜集、携带与撤离机制，完成回收箱、能量核、维修无人机和救援艇。"
+    },
+    {
+      "id": "grow",
+      "title": "GROW.md",
+      "eyebrow": "AFTER THE BATTLE",
+      "status": "战后整备场景与道具",
+      "description": "以策略调整、战斗记录与成长为线索，制作战术编辑台与战斗记录册，组织战后整备场景。"
+    },
+    {
+      "id": "tidal-station",
+      "title": "潮汐站",
+      "eyebrow": "TIDAL FIELD",
+      "status": "海岸观察前哨",
+      "description": "观测设备、器材转运与岸线环境，共同构成尺度明确的小型海岸场景。"
+    },
+    {
+      "id": "joint-study",
+      "title": "关节技术样例",
+      "eyebrow": "JOINT DEFORMATION",
+      "status": "同一网格的权重修订对照",
+      "description": "原创低模肘部样例，检查渐变权重、多角度屈曲及GLB导出后的动作。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "kestrel_rescue_ship",
+      "collection": "orbital-rescue",
+      "title": "隼式侦察救援艇",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "双推进器、观察舱、传感器与检修结构，承担侦察、抵达和回收引导。",
+      "glb": "assets/models/kestrel_rescue_ship.glb",
+      "blend": "assets/source/kestrel_rescue_ship.blend",
+      "thumbnail": "assets/previews/kestrel_rescue_ship.jpg",
+      "stats": {
+        "triangles": 14896,
+        "vertices": 12932,
+        "meshes": 73,
+        "materials": 7,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "05c9e676a82d3dd127641410abad8d631763b9600cdbfd91dc1b8758c01bee6a",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "mender_maintenance_drone",
+      "collection": "orbital-rescue",
+      "title": "维修无人机",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "围绕机身、可动机械臂与扫描组件组织骨架，表达巡检与维修动作。",
+      "glb": "assets/models/mender_maintenance_drone.glb",
+      "blend": "assets/source/mender_maintenance_drone.blend",
+      "thumbnail": "assets/previews/mender_maintenance_drone.jpg",
+      "stats": {
+        "triangles": 7436,
+        "vertices": 6130,
+        "meshes": 35,
+        "materials": 6,
+        "joints": 10,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "ab33180307cb4a06c43cfaadec85c67fc50c7f31145ecaffb6bb060872a7772c",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "rescue_supply_crate",
+      "collection": "orbital-rescue",
+      "title": "密封回收箱",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "回应撤离玩法的容器需求；包含开合结构、编号贴图和完整开盖循环。",
+      "glb": "assets/models/rescue_supply_crate.glb",
+      "blend": "assets/source/rescue_supply_crate.blend",
+      "thumbnail": "assets/previews/rescue_supply_crate.jpg",
+      "stats": {
+        "triangles": 5858,
+        "vertices": 5970,
+        "meshes": 36,
+        "materials": 7,
+        "joints": 2,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 1
+      },
+      "quality": {
+        "summary": "定位箱盖字样的局部法线问题，修订后回导复核；铭牌图像、UV与开合结构分别检查。",
+        "checks": [
+          {
+            "label": "同向邻接边",
+            "value": "342 → 0",
+            "state": "pass"
+          },
+          {
+            "label": "修订后面数",
+            "value": "5,858 三角形",
+            "state": "pass"
+          },
+          {
+            "label": "铭牌图像",
+            "value": "源/内嵌像素一致",
+            "state": "pass"
+          },
+          {
+            "label": "闭盖净空",
+            "value": "约 43 mm",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "aa6235884d62627b66e7b6862f9e103bd199bb73a33e36d0e1f76f61089651de",
+      "evidenceUrl": "review.html#inspection",
+      "evidenceLabel": "查看法线与贴图复核 ↗"
+    },
+    {
+      "id": "flux_energy_core",
+      "collection": "orbital-rescue",
+      "title": "可携带能量核",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "作为回收与能源交互对象，以保护框架和发光核心突出拾取目标。",
+      "glb": "assets/models/flux_energy_core.glb",
+      "blend": "assets/source/flux_energy_core.blend",
+      "thumbnail": "assets/previews/flux_energy_core.jpg",
+      "stats": {
+        "triangles": 4896,
+        "vertices": 4016,
+        "meshes": 22,
+        "materials": 5,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "78403c08a96f3737e285e8727dfd7438909967af8938b7ea8cfc192a565638ab",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "tidal_station",
+      "collection": "tidal-station",
+      "title": "潮汐观测仪",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "三脚支撑、太阳能板、仪表与风速转子共同构成可维护的环境观测设备。",
+      "glb": "assets/models/tidal_station.glb",
+      "blend": "assets/source/tidal_station.blend",
+      "thumbnail": "assets/previews/tidal_station.jpg",
+      "stats": {
+        "triangles": 7788,
+        "vertices": 14122,
+        "meshes": 80,
+        "materials": 8,
+        "joints": 0,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "33ca067c67b846469943109842b7e78988d0f8d5af1b346a58443b2d409c593e",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "field_cart",
+      "collection": "tidal-station",
+      "title": "器材转运车",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "轮组、承载平台、样本箱、采样罐与把手构成完整的地面转运道具。",
+      "glb": "assets/models/field_cart.glb",
+      "blend": "assets/source/field_cart.blend",
+      "thumbnail": "assets/previews/field_cart.jpg",
+      "stats": {
+        "triangles": 14876,
+        "vertices": 27498,
+        "meshes": 113,
+        "materials": 7,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "355ef797bea0006ebf8374206444db19d1065a35036f9d188772f241f7c6e04e",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "coastal_rocks",
+      "collection": "tidal-station",
+      "title": "海岸岩石",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "以轮廓、地表接触和面片明暗组织岸石，适用于场景遮挡与地形节奏。",
+      "glb": "assets/models/coastal_rocks.glb",
+      "blend": "assets/source/coastal_rocks.blend",
+      "thumbnail": "assets/previews/coastal_rocks.jpg",
+      "stats": {
+        "triangles": 480,
+        "vertices": 1374,
+        "meshes": 3,
+        "materials": 3,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "同一岩石组提供480与144三角形两个版本，在轮廓保留与远处显示成本之间取舍。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "27c5a4eef76583b2a6dd55c0e80f904f96f25134e7d5ab9134a1b9af3b77aaa8",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "reed_patch",
+      "collection": "tidal-station",
+      "title": "芦苇植被",
+      "kind": "asset",
+      "subtitle": "个人三维资产作品",
+      "purpose": "弯曲叶片、茎与穗头构成岸线植被；薄片叶面采用双面材质。",
+      "glb": "assets/models/reed_patch.glb",
+      "blend": "assets/source/reed_patch.blend",
+      "thumbnail": "assets/previews/reed_patch.jpg",
+      "stats": {
+        "triangles": 1872,
+        "vertices": 4482,
+        "meshes": 54,
+        "materials": 4,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "弯曲薄片与双面材质构成植被；1,872与610三角形两个版本，开放边按叶片用途检查。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "叶面采用双面薄片；开放边结合用途判定。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "1131f7d58d36e7939c8d6c76732dd23db7a7945f23968c81b27eb012ea49823a",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "coastal_rocks_lod1",
+      "collection": "tidal-station",
+      "title": "海岸岩石 · LOD1",
+      "kind": "lod",
+      "subtitle": "远距离版本",
+      "purpose": "远距离版本，降低几何密度并保留主要轮廓。",
+      "glb": "assets/models/coastal_rocks_lod1.glb",
+      "blend": "assets/source/coastal_rocks_lod1.blend",
+      "thumbnail": "assets/previews/coastal_rocks_lod1.jpg",
+      "stats": {
+        "triangles": 144,
+        "vertices": 432,
+        "meshes": 3,
+        "materials": 3,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "同一岩石组提供480与144三角形两个版本，在轮廓保留与远处显示成本之间取舍。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "同一资产的远距离版本，不重复计入独立资产数量。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "b13a4033bbf96753495050dd67ff3ee5ac2bed14d54dd590f9cda5ffef6d8d64",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "reed_patch_lod1",
+      "collection": "tidal-station",
+      "title": "芦苇植被 · LOD1",
+      "kind": "lod",
+      "subtitle": "远距离版本",
+      "purpose": "远距离版本，减少茎叶密度和穗头细分。",
+      "glb": "assets/models/reed_patch_lod1.glb",
+      "blend": "assets/source/reed_patch_lod1.blend",
+      "thumbnail": "assets/previews/reed_patch_lod1.jpg",
+      "stats": {
+        "triangles": 610,
+        "vertices": 1320,
+        "meshes": 25,
+        "materials": 4,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "弯曲薄片与双面材质构成植被；1,872与610三角形两个版本，开放边按叶片用途检查。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "同一资产的远距离版本，不重复计入独立资产数量。",
+          "叶面采用双面薄片；开放边结合用途判定。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "6f2064dbf339ae3612512e5616e2ca826101a8dd84e269c53057b99e7880514b",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "tidal_field_scene",
+      "collection": "tidal-station",
+      "title": "海岸观察前哨",
+      "kind": "scene",
+      "subtitle": "资产组合场景",
+      "purpose": "将观测、转运、岩石和植被组织为微型环境，展示尺度、动线与资产复用。",
+      "glb": "assets/models/tidal_field_scene.glb",
+      "blend": "assets/source/tidal_field_scene.blend",
+      "thumbnail": "assets/previews/tidal_field_scene.jpg",
+      "stats": {
+        "triangles": 35616,
+        "vertices": 72900,
+        "meshes": 489,
+        "materials": 52,
+        "joints": 0,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 0
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "由同组资产组合，场景实例不重复计入独立资产数量。"
+        ]
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "sha256": "5216747bfb2a701cb4a3beb8188af804aa95ad4ae1da2a5228cd83bed2896422",
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "combat_field_journal",
+      "collection": "grow",
+      "title": "战斗记录册",
+      "kind": "asset",
+      "subtitle": "场景道具",
+      "purpose": "围绕战斗记录、经验整理与成长摘要制作的便携道具；完成皮革包覆、书页分层、织布索引、缝线与铜扣细节。",
+      "glb": "assets/models/combat_field_journal.glb",
+      "blend": "assets/source/combat_field_journal.blend",
+      "thumbnail": "assets/previews/combat_field_journal.jpg",
+      "sha256": "75cd6ffc93bc87af3e8e0f1094474c77a6544e4b7fd354153f3c98c56e854a4e",
+      "stats": {
+        "triangles": 21034,
+        "vertices": 17533,
+        "meshes": 140,
+        "materials": 9,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 11
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "图像材质",
+            "value": "11 张嵌入图像",
+            "state": "pass"
+          },
+          {
+            "label": "导出复核",
+            "value": "源/导回规模及退化面检查完成",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。"
+        ]
+      },
+      "evidenceUrl": "review.html#production"
+    },
+    {
+      "id": "tactical_workbench",
+      "collection": "grow",
+      "title": "战术编辑台",
+      "kind": "asset",
+      "subtitle": "场景道具",
+      "purpose": "将原游戏战后策略整理与流程编辑机制转译为实体工作台；完成木质承载结构、织布工作垫、可读终端与操作部件的三维制作。",
+      "glb": "assets/models/tactical_workbench.glb",
+      "blend": "assets/source/tactical_workbench.blend",
+      "thumbnail": "assets/previews/tactical_workbench.jpg",
+      "sha256": "780f28d050fd53b92651fcc0d68994992d7634863bd9fa17166ade9dfd67dae7",
+      "stats": {
+        "triangles": 28254,
+        "vertices": 21609,
+        "meshes": 93,
+        "materials": 9,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 10
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "quality": {
+        "summary": "可读终端显示面采用独立薄片结构；4条开放边依据用途单独复核，不能由计数直接判缺面。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "图像材质",
+            "value": "10 张嵌入图像",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "两根终端支架后移65mm，屏前支架遮挡采样154→0；保持几何、UV与材质。"
+        ]
+      },
+      "evidenceUrl": "review.html#support-revision",
+      "evidenceLabel": "查看终端支架修订 ↗"
+    },
+    {
+      "id": "post_battle_corner",
+      "collection": "grow",
+      "title": "战后整备区",
+      "kind": "scene",
+      "subtitle": "组合场景",
+      "purpose": "将战术编辑台与战斗记录册组织为战后整备空间，表现从观察记录到策略调整的连续使用关系。场景复用两件独立资产，不新增资产计数。",
+      "glb": "assets/models/post_battle_corner.glb",
+      "blend": "assets/source/post_battle_corner.blend",
+      "thumbnail": "assets/previews/post_battle_corner.jpg",
+      "sha256": "f0be65b08c47340bb62114fee2ac5d0423f6f632239d04e7b7f7950f5cc9dcd9",
+      "stats": {
+        "triangles": 49288,
+        "vertices": 39142,
+        "meshes": 233,
+        "materials": 18,
+        "joints": 0,
+        "animations": 0,
+        "uvMapped": true,
+        "embeddedImages": 15
+      },
+      "camera": {
+        "azimuth": 35,
+        "elevation": 25
+      },
+      "quality": {
+        "summary": "围绕场景用途完成结构、材质与交付，并检查源工程与实际导出模型。",
+        "checks": [
+          {
+            "label": "源工程",
+            "value": "Blender / GLB",
+            "state": "pass"
+          },
+          {
+            "label": "UV",
+            "value": "导出网格具备UV坐标",
+            "state": "pass"
+          },
+          {
+            "label": "图像材质",
+            "value": "15 张嵌入图像",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "可打开源工程检查部件、UV与材质；专项案例提供具体问题与复核依据。",
+          "由同组资产组合，场景实例不重复计入独立资产数量。",
+          "两根终端支架后移65mm，屏前支架遮挡采样154→0；保持几何、UV与材质。"
+        ]
+      },
+      "evidenceUrl": "review.html#support-revision",
+      "evidenceLabel": "查看终端支架修订 ↗"
+    },
+    {
+      "id": "elbow_corrected",
+      "collection": "joint-study",
+      "title": "肘部·渐变权重修订",
+      "kind": "study",
+      "subtitle": "原创低模关节技术样例",
+      "purpose": "同一网格的权重修订与动作导出检查。",
+      "glb": "assets/cases/joint/elbow_corrected.glb",
+      "blend": "assets/cases/joint/elbow_deformation_comparison.blend",
+      "thumbnail": "assets/cases/joint/images/comparison_90.png",
+      "stats": {
+        "triangles": 452,
+        "vertices": 297,
+        "meshes": 1,
+        "materials": 2,
+        "joints": 2,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 0,
+        "sourceVertices": 228
+      },
+      "quality": {
+        "summary": "完成多角度屈曲与GLB回读验证。",
+        "checks": [
+          {
+            "label": "骨骼 / 动作",
+            "value": "2 / 1",
+            "state": "pass"
+          },
+          {
+            "label": "混合权重点",
+            "value": "84",
+            "state": "pass"
+          },
+          {
+            "label": "关键姿态",
+            "value": "0° / 45° / 90° / 120°",
+            "state": "pass"
+          },
+          {
+            "label": "回读位置误差",
+            "value": "≤ 1.25e-7 m",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "源工程同时保存修订前后对照。",
+          "这是一份局部关节技术样例；不是完整人物角色。"
+        ]
+      },
+      "evidenceUrl": "review.html#deformation",
+      "evidenceLabel": "查看权重与屈曲对照 ↗"
+    },
+    {
+      "id": "elbow_before",
+      "collection": "joint-study",
+      "title": "肘部·异常权重对照",
+      "kind": "study",
+      "subtitle": "原创低模关节技术样例",
+      "purpose": "用硬切权重及远端误权重暴露拉扯问题；此版本作为检查对照。",
+      "glb": "assets/cases/joint/elbow_before.glb",
+      "blend": "assets/cases/joint/elbow_deformation_comparison.blend",
+      "thumbnail": "assets/cases/joint/images/comparison_90.png",
+      "stats": {
+        "triangles": 452,
+        "vertices": 297,
+        "meshes": 1,
+        "materials": 2,
+        "joints": 2,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 0,
+        "sourceVertices": 228
+      },
+      "quality": {
+        "summary": "异常权重导致远端顶点不能跟随前臂，屈曲时形成长刺。",
+        "checks": [
+          {
+            "label": "骨骼 / 动作",
+            "value": "2 / 1",
+            "state": "pass"
+          },
+          {
+            "label": "混合权重点",
+            "value": "0",
+            "state": "issue"
+          },
+          {
+            "label": "关键姿态",
+            "value": "0° / 45° / 90° / 120°",
+            "state": "pass"
+          },
+          {
+            "label": "回读位置误差",
+            "value": "≤ 1.25e-7 m",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "源工程同时保存修订前后对照。",
+          "这是一份局部关节技术样例；不是完整人物角色。"
+        ]
+      },
+      "evidenceUrl": "review.html#deformation",
+      "evidenceLabel": "查看权重与屈曲对照 ↗"
+    }
+  ]
+}

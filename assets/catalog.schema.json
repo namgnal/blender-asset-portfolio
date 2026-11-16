@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "namgnal 三维作品目录",
+  "description": "所有文件路径相对作品浏览器 index.html。统计为实测结果，未知时使用 null。不要由模型文件数量推定个人原创数量。",
+  "type": "object",
+  "required": ["schemaVersion", "collections", "assets"],
+  "properties": {
+    "schemaVersion": {"const":1},
+    "author": {"type":"string"},
+    "defaultCollection": {"type":"string"},
+    "defaultAsset": {"type":"string"},
+    "collections": {"type":"array","minItems":1,"items":{"type":"object","required":["id","title"],"properties":{"id":{"type":"string"},"title":{"type":"string"},"eyebrow":{"type":"string"},"status":{"type":"string"},"description":{"type":"string"}}}},
+    "assets": {"type":"array","items":{"type":"object","required":["id","collection","title"],"properties":{
+      "id":{"type":"string"},"collection":{"type":"string"},"kind":{"enum":["asset","lod","scene"],"description":"asset 为独立资产，lod 为同一资产的细节等级变体，scene 为资产组合场景；分别计数。未指定种类只计入泛称内容。"},"title":{"type":"string"},"subtitle":{"type":"string"},"purpose":{"type":"string"},
+      "glb":{"type":["string","null"]},"blend":{"type":["string","null"]},"thumbnail":{"type":["string","null"]},
+      "stats":{"type":"object","properties":{"triangles":{"type":["integer","null"],"minimum":0},"vertices":{"type":["integer","null"],"minimum":0},"meshes":{"type":["integer","null"],"minimum":0},"materials":{"type":["integer","null"],"minimum":0},"joints":{"type":["integer","null"],"minimum":0},"animations":{"type":["integer","null"],"minimum":0},"uvMapped":{"type":["boolean","null"]}}},
+      "quality":{"type":"object","properties":{"summary":{"type":"string"},"checks":{"type":"array","items":{"type":"object","required":["label","value"],"properties":{"label":{"type":"string"},"value":{"type":"string"},"state":{"enum":["pass","note","issue"]}}}},"notes":{"type":"array","items":{"type":"string"}}}},
+      "camera":{"type":"object","description":"角度单位为度；模型自动居中并适配画布。","properties":{"azimuth":{"type":"number"},"elevation":{"type":"number","minimum":-80,"maximum":85}}}
+    }}}
+  }
+}

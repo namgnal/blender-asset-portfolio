@@ -1,0 +1,275 @@
+{
+  "title": "原创低模肘部：权重问题定位与修订复验",
+  "created_on": "2026-11-17",
+  "blender_version": "4.5.16 LTS",
+  "source": "原创局部关节技术样例。",
+  "topology": {
+    "vertices": 228,
+    "edges": 444,
+    "polygons": 218,
+    "quads": 216,
+    "ngon_caps": 2,
+    "triangles": 452
+  },
+  "cross_sections": [
+    0,
+    0.12,
+    0.35,
+    0.8,
+    1.2,
+    1.5,
+    1.65,
+    1.8,
+    1.9,
+    2.0,
+    2.1,
+    2.2,
+    2.35,
+    2.5,
+    2.8,
+    3.2,
+    3.65,
+    3.88,
+    4.0
+  ],
+  "radial_vertices": 12,
+  "bones": [
+    "upper_arm",
+    "forearm"
+  ],
+  "joint_transition_y": [
+    1.5,
+    2.5
+  ],
+  "animation": {
+    "frames": 61,
+    "fps": 30,
+    "sampled_poses": [
+      0,
+      45,
+      90,
+      120
+    ],
+    "keyframes": {
+      "1": 0,
+      "16": 45,
+      "31": 90,
+      "46": 120,
+      "61": 0
+    },
+    "skinning": "LINEAR; preserve-volume disabled for consistent glTF semantics"
+  },
+  "variants": {
+    "before": {
+      "mixed_weight_vertices": 0,
+      "unweighted_vertices": 0,
+      "weight_sum_max_error": 0.0,
+      "pose_metrics": [
+        {
+          "frame": 1,
+          "bend_degrees": 0,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 2.2351741790771484e-09,
+          "evaluated_min_polygon_area_m2": 0.00029407276539131997
+        },
+        {
+          "frame": 16,
+          "bend_degrees": 45,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 0.2311896529747148,
+          "evaluated_min_polygon_area_m2": 0.00012060340144671499
+        },
+        {
+          "frame": 31,
+          "bend_degrees": 90,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 0.4271827966505093,
+          "evaluated_min_polygon_area_m2": 9.889642009511589e-05
+        },
+        {
+          "frame": 46,
+          "bend_degrees": 120,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 0.5231899393444274,
+          "evaluated_min_polygon_area_m2": 0.00015435026376508175
+        }
+      ]
+    },
+    "after": {
+      "mixed_weight_vertices": 84,
+      "unweighted_vertices": 0,
+      "weight_sum_max_error": 1.4901161193847656e-08,
+      "pose_metrics": [
+        {
+          "frame": 1,
+          "bend_degrees": 0,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 2.2351741790771484e-09,
+          "evaluated_min_polygon_area_m2": 0.00029407276539131997
+        },
+        {
+          "frame": 16,
+          "bend_degrees": 45,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 7.372687385590661e-08,
+          "evaluated_min_polygon_area_m2": 0.00018864627694711088
+        },
+        {
+          "frame": 31,
+          "bend_degrees": 90,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 7.152557373046875e-08,
+          "evaluated_min_polygon_area_m2": 7.753795303869992e-05
+        },
+        {
+          "frame": 46,
+          "bend_degrees": 120,
+          "distal_test_vertex": 216,
+          "distal_vertex_expected_forearm_position_error_m": 9.11775740431449e-08,
+          "evaluated_min_polygon_area_m2": 5.8735096827149386e-05
+        }
+      ]
+    }
+  },
+  "controlled_change": "网格位置和拓扑保持相同；把肘部硬切权重改为渐变权重，修正远端顶点216误归上臂的问题。",
+  "scale": {
+    "model_unit_to_m": 0.15,
+    "rest_length_m": 0.6,
+    "rest_max_radius_m": 0.056999999999999995
+  },
+  "interpretation": "远端测试点应随前臂刚性运动，其位置偏差用于定位误权重；该指标不等于整个关节变形质量。关节连续性另由90/120度的真实渲染对照人工检查。",
+  "limits": [
+    "这是两骨骼、单轴屈曲的局部技术样例，不代表完整角色生产经历。",
+    "LBS在大角度仍可能压缩体积；未声称体积完全保持或解剖正确。",
+    "未验证任意引擎、任意动作与全身碰撞；GLB导出回读结果另列。",
+    "对照中的硬切和单点误权重为主动设置的受控缺陷，不是历史平台任务。"
+  ],
+  "roundtrip": {
+    "source_mesh_checks": {
+      "before": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "same_direction_shared_edges": 0,
+        "uv_zero_area_triangles": 0,
+        "rest_world_height_m": 0.6000000238418579,
+        "materials": 2
+      },
+      "after": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "same_direction_shared_edges": 0,
+        "uv_zero_area_triangles": 0,
+        "rest_world_height_m": 0.6000000238418579,
+        "materials": 2
+      }
+    },
+    "exports": {
+      "elbow_corrected": {
+        "mesh_objects": 1,
+        "vertices_with_export_splits": 297,
+        "triangles": 452,
+        "bones": 2,
+        "actions": [
+          {
+            "name": "Animation",
+            "frame_range": [
+              1.0,
+              61.0
+            ]
+          }
+        ],
+        "sampled_position_comparison": [
+          {
+            "source_frame": 1,
+            "import_frame": 1.0,
+            "bidirectional_max_position_error_m": 6.365778852490731e-08
+          },
+          {
+            "source_frame": 16,
+            "import_frame": 16.0,
+            "bidirectional_max_position_error_m": 9.632565046918497e-08
+          },
+          {
+            "source_frame": 31,
+            "import_frame": 31.0,
+            "bidirectional_max_position_error_m": 1.2489448945403256e-07
+          },
+          {
+            "source_frame": 46,
+            "import_frame": 46.0,
+            "bidirectional_max_position_error_m": 9.75890971528719e-08
+          },
+          {
+            "source_frame": 61,
+            "import_frame": 61.0,
+            "bidirectional_max_position_error_m": 6.365778852490731e-08
+          }
+        ],
+        "passed_tolerance_1e_5_m": true
+      },
+      "elbow_before": {
+        "mesh_objects": 1,
+        "vertices_with_export_splits": 297,
+        "triangles": 452,
+        "bones": 2,
+        "actions": [
+          {
+            "name": "Animation",
+            "frame_range": [
+              1.0,
+              61.0
+            ]
+          }
+        ],
+        "sampled_position_comparison": [
+          {
+            "source_frame": 1,
+            "import_frame": 1.0,
+            "bidirectional_max_position_error_m": 6.365778852490731e-08
+          },
+          {
+            "source_frame": 16,
+            "import_frame": 16.0,
+            "bidirectional_max_position_error_m": 9.632565046918497e-08
+          },
+          {
+            "source_frame": 31,
+            "import_frame": 31.0,
+            "bidirectional_max_position_error_m": 1.2489448945403256e-07
+          },
+          {
+            "source_frame": 46,
+            "import_frame": 46.0,
+            "bidirectional_max_position_error_m": 9.75890971528719e-08
+          },
+          {
+            "source_frame": 61,
+            "import_frame": 61.0,
+            "bidirectional_max_position_error_m": 6.365778852490731e-08
+          }
+        ],
+        "passed_tolerance_1e_5_m": true
+      }
+    },
+    "method": "源模型与回导模型分别求值，消除比较模型的展示平移，对0/45/90/120/闭环姿态做双向最近顶点距离比较；导出拆点可使顶点数增多。",
+    "limits": "仅验证此glTF文件的Blender回导与五个关键姿态，不保证其他软件/引擎或任意姿态。"
+  },
+  "files": [
+    {
+      "name": "elbow_before.glb",
+      "bytes": 28580,
+      "sha256": "9cc74d01c6ae3cf7c4ba62422029abe3ec272011f78082f3f30307d53d693091"
+    },
+    {
+      "name": "elbow_corrected.glb",
+      "bytes": 28596,
+      "sha256": "11ad43bbb4aa4501a728e621db6fe839c8e32efe431e6342fee99acf5fb386b5"
+    },
+    {
+      "name": "elbow_deformation_comparison.blend",
+      "bytes": 119449,
+      "sha256": "79b6900fec13a677552a5d15e86097e0e647428f91ac223fc19d67a8681ce04b"
+    }
+  ],
+  "publication_note": "公开工程的渲染输出路径使用相对路径；几何与动作保留。"
+}

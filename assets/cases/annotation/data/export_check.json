@@ -1,0 +1,32 @@
+{
+  "glb_reimport": "passed",
+  "objects": [
+    {
+      "name": "DEMO_SINGLE_FAULT_Solid_wall_missing_face",
+      "triangles": 106,
+      "boundary_edges": 4
+    },
+    {
+      "name": "REFERENCE_Solid_wall_closed",
+      "triangles": 108,
+      "boundary_edges": 0
+    }
+  ],
+  "blend_mesh_objects": [
+    "DEMO_SINGLE_FAULT_Solid_wall_missing_face",
+    "REFERENCE_Solid_wall_closed"
+  ],
+  "scope": "仅两件个人壁板派生对象；独立工程无团队模型。",
+  "files": [
+    {
+      "path": "source/boundary_demo.blend",
+      "sha256": "da9b13f4e806c4155c53ed169f59951be515184ff0930832d114876ffb5c3c32",
+      "bytes": 479391
+    },
+    {
+      "path": "source/boundary_demo.glb",
+      "sha256": "7bfba17ecf7350c1ba1e25494205537b715387ab8b7b9d99ceca948bed149b8e",
+      "bytes": 17180
+    }
+  ]
+}

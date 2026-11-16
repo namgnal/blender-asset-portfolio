@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142b3c">
+  <meta name="description" content="namgnal 的三维资产作品台。浏览游戏场景与资产，检查模型网格、材质、UV 和动画，下载源工程。">
+  <title>namgnal · 三维资产作品台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23142b3c'/%3E%3Cpath d='M18 44V22h8v4c3-5 15-8 19 2v16h-8V31c0-6-10-5-11 1v12Z' fill='%23d5a477'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./review.css">
+  <script type="importmap">
+    {"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#workbench">跳至三维作品</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="namgnal 作品首页"><span class="brand-mark" aria-hidden="true">n.</span><span>namgnal<small>3D ASSET PORTFOLIO</small></span></a>
+    <nav class="header-nav" aria-label="页面导航"><a href="#workbench" class="current">作品</a><a href="review.html">技术案例</a><a href="#experience">项目经历 <span aria-hidden="true">↗</span></a></nav>
+    <span class="header-note">游戏资产 / 环境造物</span>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">FORM · FUNCTION · DETAIL</p><h1 id="page-title">三维资产作品台<span class="title-dot">.</span></h1></div>
+      <p class="intro-note">游戏场景、交互道具与环境资产。<br>查看模型、材质与动作，打开源工程检查细节。</p>
+    </section>
+
+
+    <nav class="evidence-nav" aria-label="按能力查看证据">
+      <a href="review.html#production"><span>资产制作</span><small>用途、面数与 LOD</small><b aria-hidden="true">↗</b></a>
+      <a href="review.html#inspection"><span>源模型质检</span><small>问题、处理与复验</small><b aria-hidden="true">↗</b></a>
+      <a href="review.html#deformation"><span>关节与动作</span><small>拓扑、权重与屈曲</small><b aria-hidden="true">↗</b></a>
+      <a href="review.html#annotation"><span>标注与复核</span><small>规则、记录与结论</small><b aria-hidden="true">↗</b></a>
+    </nav>
+    <p class="static-access">直接阅读：<a href="assets/documents/三维资产作品集.pdf" target="_blank" rel="noopener">作品集 PDF ↗</a><a href="assets/documents/三维资产标注与复核案例.pdf" target="_blank" rel="noopener">质检案例 PDF ↗</a><span>下方模型可旋转、切换线框，并下载源工程。</span></p>
+
+    <section id="workbench" class="workbench" aria-label="交互式三维作品浏览器">
+      <div class="collection-bar">
+        <div id="collection-tabs" class="collection-tabs" role="tablist" aria-label="作品系列"></div>
+        <p id="collection-status" class="collection-status">三维资产作品</p>
+      </div>
+      <div class="workspace">
+        <div class="viewer" id="viewer">
+          <div class="viewer-heading"><span class="live-label"><i id="live-dot"></i><span id="viewer-state">准备作品</span></span><span id="asset-series" class="viewer-series"></span></div>
+          <div class="view-modes" role="group" aria-label="模型显示方式">
+            <button type="button" data-mode="material" aria-pressed="true" title="查看原始材质">材质</button>
+            <button type="button" data-mode="wireframe" aria-pressed="false" title="查看三角形网格">线框</button>
+            <button type="button" data-mode="normal" aria-pressed="false" title="以颜色显示视图空间法线">法线</button>
+            <button type="button" data-mode="uv" aria-pressed="false" title="将检查棋盘映射到模型 UV">UV 棋盘</button>
+          </div>
+          <div id="canvas-host" class="canvas-host" tabindex="0" role="img" aria-label="三维模型；拖动旋转，滚轮缩放，右键平移；方向键旋转，加减键缩放，R 重置"></div>
+          <img id="fallback-preview" class="fallback-preview" src="assets/previews/kestrel_rescue_ship.jpg" alt="救援艇静态预览" hidden>
+          <div id="load-state" class="load-state" role="status" aria-live="polite"><div class="load-orbit" aria-hidden="true"></div><strong id="load-title">正在准备作品台</strong><p id="load-message">加载本地模型与材质</p><button id="retry-load" type="button" hidden>重新加载</button></div>
+          <div class="viewer-bottom">
+            <p id="mode-help" class="mode-help">拖动旋转 · 滚轮缩放 · 右键平移</p>
+            <div class="camera-actions"><button type="button" id="auto-rotate" aria-pressed="false" title="开启自动旋转"><span aria-hidden="true">⟳</span> 自动旋转</button><button type="button" id="reset-view" title="重置视角，快捷键 R"><span aria-hidden="true">⌖</span> 重置视角</button><button type="button" id="fullscreen" title="切换全屏" aria-label="切换作品画布全屏"><span aria-hidden="true">⛶</span></button></div>
+          </div>
+          <div id="animation-bar" class="animation-bar" hidden><span class="animation-label">运动研究</span><label class="sr-only" for="animation-select">选择动画</label><select id="animation-select"></select><button id="animation-toggle" type="button" aria-label="播放动画">播放</button><input id="animation-progress" type="range" min="0" max="1000" value="0" aria-label="动画进度"><span id="animation-time">0.0 / 0.0 s</span></div>
+        </div>
+
+        <aside class="inspector" aria-label="当前资产说明">
+          <div class="inspector-main"><p id="asset-subtitle" class="eyebrow">ASSET STUDY</p><h2 id="asset-title">选择作品</h2><p id="asset-purpose" class="asset-purpose">浏览可交互模型，检查结构与细节。</p><dl id="asset-stats" class="asset-stats"></dl><div class="quality-heading"><span>质量观察</span><span class="thin-rule"></span></div><p id="quality-summary" class="quality-summary"></p><ul id="quality-checks" class="quality-checks"></ul><details id="quality-details" class="quality-details"><summary>查看检查范围</summary><ul id="quality-notes"></ul></details></div>
+          <div class="source-actions"><a id="asset-evidence" class="asset-evidence" href="review.html">查看技术案例 ↗</a><a id="download-blend" class="source-link primary" download aria-disabled="true">Blender 源工程 <span aria-hidden="true">↓</span></a><a id="download-glb" class="source-link" download aria-disabled="true">GLB 模型 <span aria-hidden="true">↓</span></a><p>打开源工程，继续查看与编辑。</p></div>
+        </aside>
+      </div>
+      <div class="asset-rail-heading"><span id="collection-description">当前个人三维资产研究</span><span id="asset-count"></span></div>
+      <div id="asset-rail" class="asset-rail" aria-label="选择模型"></div>
+    </section>
+
+    <section id="approach" class="approach-section">
+      <div class="section-title"><p class="eyebrow">MODELING & REVIEW</p><h2>制作与质检</h2></div>
+      <div class="approach-content"><div class="approach-item"><h3>游戏里的用途</h3><p>回收箱需要容纳任务物并完整开合，救援设备需要清楚的连接与承载结构，场景道具需要对应玩家的操作。</p></div><div class="approach-item"><h3>问题与判断</h3><p>检查网格、法线、UV、材质和动作，将问题定位到对象与帧；结合用途区分真实缺陷、预期结构和需要补充确认的情况。</p></div><div class="approach-item"><h3>工程与证据</h3><p>提供 Blender 源工程、GLB 和检查材料。可查看角色关节、UV 修订、贴图与开合结构的实际案例。</p><a class="document-link" href="assets/documents/三维资产标注与复核案例.pdf" target="_blank" rel="noopener">查看标注与复核案例 ↗</a></div></div>
+    </section>
+
+    <section id="experience" class="experience-section">
+      <div><p class="eyebrow">PROJECT EXPERIENCE</p><h2>游戏开发与三维评估</h2><p>通过 Xpert 参与 Blender 三维渲染产物评估，完成多项实际任务；对照要求检查形体、结构、材质光照与动画，并说明具体问题。</p><p>参与 TapTap 2026 聚光灯 21 天游戏创作挑战团队作品《织光之野》，深度参与三维资产相关工作、质量复核与 Windows 版本交付。</p></div>
+      <a class="experience-link" href="https://www.taptap.cn/app/985908" target="_blank" rel="noopener noreferrer"><span>织光之野<small>TapTap · PC 试玩版</small></span><span class="external-arrow" aria-hidden="true">↗</span></a>
+    </section>
+    <section class="project-context-grid" aria-label="作品与项目需求">
+      <article><p class="eyebrow">SPACE SURVIVOR</p><h3>太空幸存者 · 回收与撤离资产</h3><p>在生存与搜集撤离玩法开发基础上，完成回收箱、可携带能量核、维修无人机和救援艇的三维制作。箱体对应搜索与回收，能量核对应携带任务物，载具与无人机扩展救援场景的视觉表达。</p></article>
+      <article><p class="eyebrow">GROW.md</p><h3>战后整备场景与道具</h3><p>我参与了 GROW.md 的交互、代码与测试贡献。该项目获 2026“翌光计划·武汉全球高校游戏创作挑战赛”最佳技术奖。围绕其战后策略调整、战斗记录与成长机制，制作战术编辑台和战斗记录册，组织为三维整备场景。</p><a href="https://vioano.github.io/grow-md" target="_blank" rel="noopener noreferrer" class="document-link">GROW.md 项目展示 ↗</a></article>
+    </section>
+  </main>
+  <footer class="site-footer"><span>namgnal <span class="footer-separator">/</span> 三维资产作品台</span><span>模型的细节，可以亲自查看。</span></footer>
+  <noscript><div class="noscript-message">请启用 JavaScript 以查看三维模型。源工程与模型文件位于 assets 目录。</div></noscript>
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('load-state').classList.add('error');
+      document.getElementById('load-title').textContent = '请通过本地服务打开';
+      document.getElementById('load-message').textContent = '双击目录中的“启动作品浏览器.cmd”，再访问 http://127.0.0.1:8766。直接打开 HTML 无法读取三维模型。';
+      document.getElementById('viewer-state').textContent = '等待本地服务';
+    }
+  </script>
+  <script type="module" src="./app.js" onerror="document.getElementById('load-state').classList.add('error');document.getElementById('load-title').textContent='作品台模块未能读取';document.getElementById('load-message').textContent=location.protocol==='file:'?'请按本地启动说明启动服务后打开页面。':'请确认 app.js 和 vendor 文件完整，使用现代浏览器重新打开。';"></script>
+</body>
+</html>

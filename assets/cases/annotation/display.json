@@ -1,0 +1,479 @@
+{
+  "summary": "4 条记录 · 已修订 / 已核实 / 设计允许 / 待修订",
+  "records": [
+    {
+      "id": "A01",
+      "title": "箱盖字样局部绕序：修订后复核",
+      "status": "已修订并通过本项复核",
+      "tone": "",
+      "image": "assets/cases/annotation/images/01_lid_normals_before_after.png",
+      "imageAlt": "下排为问题复制件，红色为诊断反向面；上排为修订件。诊断颜色不是原材质。",
+      "fields": [
+        {
+          "label": "对象",
+          "text": "Supply lid marking"
+        },
+        {
+          "label": "初检",
+          "text": "需局部修订"
+        },
+        {
+          "label": "依据",
+          "text": "共享边有向端点检查确认342条同向邻接边，且存在反向着色角法线；仅检查封闭或总体积为正不足以排除此问题。"
+        },
+        {
+          "label": "处理",
+          "text": "仅对字样以1e-6m焊接、重算法线并采用硬表面平直法线；正式回收箱已应用修订。"
+        },
+        {
+          "label": "复核",
+          "text": "归档修订工程与GLB导回检查结果复核"
+        }
+      ],
+      "raw": {
+        "id": "A01",
+        "asset_id": "rescue_supply_crate",
+        "title": "箱盖字样局部绕序：修订后复核",
+        "object": "Supply lid marking",
+        "issue_class": "normal_winding_conflict",
+        "sample_origin": "个人回收箱源模型中的真实局部问题；非故意造错。",
+        "standard": {
+          "ruleset_id": "OWN-ASSET-QA-1.0",
+          "clauses": [
+            "N01",
+            "R01"
+          ]
+        },
+        "evidence": [
+          {
+            "path": "images/01_lid_normals_before_after.png",
+            "type": "image/png",
+            "caption": "下排为问题复制件，红色为诊断反向面；上排为修订件。诊断颜色不是原材质。",
+            "sha256": "cb54682be2dcf74af42c5e12b36ae797db05a85202b0a9882a565a170f9941a1"
+          }
+        ],
+        "initial": {
+          "status": "needs_revision",
+          "label": "需局部修订",
+          "facts": {
+            "triangles": 1496,
+            "same_directed_shared_edges": 342,
+            "boundary_edges": 0,
+            "opposed_shading_normal_corners": 6
+          },
+          "note": "问题定位在浮雕字样；未把其余箱体部件一并标为翻面。"
+        },
+        "review": {
+          "decision": "confirmed_local_defect",
+          "label": "确认局部面绕序缺陷",
+          "basis": "共享边有向端点检查确认342条同向邻接边，且存在反向着色角法线；仅检查封闭或总体积为正不足以排除此问题。"
+        },
+        "action": {
+          "performed": "仅对字样以1e-6m焊接、重算法线并采用硬表面平直法线；正式回收箱已应用修订。",
+          "requested": "后续修改该字样后，重新运行同项检查并保留导出回读结果。",
+          "not_performed": "本记录不覆盖整箱全路径碰撞检测。"
+        },
+        "recheck": {
+          "method": "归档修订工程与GLB导回检查结果复核",
+          "facts": {
+            "triangles": 1496,
+            "same_directed_shared_edges": 0,
+            "boundary_edges": 0,
+            "collapsed_uv_triangles": 0,
+            "opposed_shading_normal_corners": 0,
+            "whole_asset_triangles": 5858
+          },
+          "source_glb_before_sha256": "b77f878f8a3cd2ad83d8dc4838c3faed7ebd4af895c698201ae8adaf18ea9599",
+          "source_glb_after_sha256": "aa6235884d62627b66e7b6862f9e103bd199bb73a33e36d0e1f76f61089651de"
+        },
+        "final_status": "resolved",
+        "final_label": "已修订并通过本项复核",
+        "record_flow": [
+          {
+            "phase": "初检",
+            "description": "定位字样对象与同向邻接边。"
+          },
+          {
+            "phase": "判定",
+            "description": "按N01认定局部绕序缺陷。"
+          },
+          {
+            "phase": "处理",
+            "description": "修订指定对象，保持三角数量。"
+          },
+          {
+            "phase": "复核",
+            "description": "回导检查为0冲突；保存前后证据。"
+          }
+        ],
+        "limitations": [
+          "测量及修订来自已归档专项实测；此次整理为结构化记录并复核证据。",
+          "通过本项不等于资产所有维度均无缺陷。"
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "title": "铭牌贴图：从源图到GLB的链路确认",
+      "status": "已核实，保留现有配置",
+      "tone": "",
+      "image": "assets/cases/annotation/images/02_placard_texture_chain.png",
+      "imageAlt": "实际GLB内嵌图、铭牌UV映射和同材质UV布局；图中使用真实图像。",
+      "fields": [
+        {
+          "label": "对象",
+          "text": "Printed serial and recovery instructions"
+        },
+        {
+          "label": "初检",
+          "text": "需确认真实贴图链路"
+        },
+        {
+          "label": "依据",
+          "text": "sRGB颜色接入Base Color；源图与GLB内嵌图逐像素一致。像素空间各向异性约1.003584，未检出本铭牌的正面积UV重叠。"
+        },
+        {
+          "label": "处理",
+          "text": "核对材质连接、颜色空间、嵌入图像及UV映射，保留现有贴图。"
+        },
+        {
+          "label": "复核",
+          "text": "归档图像像素、材质槽与UV分析结果复核"
+        }
+      ],
+      "raw": {
+        "id": "A02",
+        "asset_id": "rescue_supply_crate",
+        "title": "铭牌贴图：从源图到GLB的链路确认",
+        "object": "Printed serial and recovery instructions",
+        "issue_class": "texture_chain_verification",
+        "sample_origin": "个人回收箱实际铭牌图像与UV。",
+        "standard": {
+          "ruleset_id": "OWN-ASSET-QA-1.0",
+          "clauses": [
+            "T01",
+            "R01"
+          ]
+        },
+        "evidence": [
+          {
+            "path": "images/02_placard_texture_chain.png",
+            "type": "image/png",
+            "caption": "实际GLB内嵌图、铭牌UV映射和同材质UV布局；图中使用真实图像。",
+            "sha256": "9fa8220313d8994494a7abb86ef0c7012ddc36ee1b7c2e7b145badac99698bbf"
+          }
+        ],
+        "initial": {
+          "status": "requires_verification",
+          "label": "需确认真实贴图链路",
+          "facts": {
+            "surface_size_m": [
+              0.54,
+              0.21
+            ],
+            "image_size_px": [
+              1280,
+              496
+            ],
+            "image_node_present": true,
+            "uv_layer_present": true
+          },
+          "note": "图像节点和UV存在仅是初检事实，尚不足以证明导出材质正确使用图像。"
+        },
+        "review": {
+          "decision": "verified",
+          "label": "链路与拉伸检查通过",
+          "basis": "sRGB颜色接入Base Color；源图与GLB内嵌图逐像素一致。像素空间各向异性约1.003584，未检出本铭牌的正面积UV重叠。"
+        },
+        "action": {
+          "performed": "核对材质连接、颜色空间、嵌入图像及UV映射，保留现有贴图。",
+          "requested": "若任务另要求唯一烘焙UV，应另查指定通道和用途，不能直接沿用本结论。",
+          "not_performed": "未将此项扩展为所有材质通道的完整PBR认证。"
+        },
+        "recheck": {
+          "method": "归档图像像素、材质槽与UV分析结果复核",
+          "facts": {
+            "same_pixels": true,
+            "colorspace": "sRGB",
+            "glb_slot": "pbrMetallicRoughness.baseColorTexture",
+            "max_image_space_anisotropy": 1.0035841146598516,
+            "source_pixel_sha256": "c4703aefd93c0913d7a1f98b935eecacad99e5ae1515cc0439794359bf81d8f8",
+            "embedded_pixel_sha256": "c4703aefd93c0913d7a1f98b935eecacad99e5ae1515cc0439794359bf81d8f8"
+          }
+        },
+        "final_status": "verified",
+        "final_label": "已核实，保留现有配置",
+        "record_flow": [
+          {
+            "phase": "初检",
+            "description": "确认对象、图像与UV属性。"
+          },
+          {
+            "phase": "判定",
+            "description": "逐项查证实际材质连接和导出链路。"
+          },
+          {
+            "phase": "处理",
+            "description": "无需修改，保留图像与UV。"
+          },
+          {
+            "phase": "复核",
+            "description": "记录像素哈希和拉伸测量，限定结论范围。"
+          }
+        ],
+        "limitations": [
+          "UV重复是否允许取决于具体贴图/烘焙用途。",
+          "本条没有虚构先前的错误标注或返修。"
+        ]
+      }
+    },
+    {
+      "id": "A03",
+      "title": "终端显示面：开放边提示的用途复核",
+      "status": "设计允许，保留原始提示",
+      "tone": "note",
+      "image": "assets/cases/support/support_after_front.png",
+      "imageAlt": "终端支架修订后的屏幕，开放显示面按用途保留",
+      "fields": [
+        {
+          "label": "对象",
+          "text": "Recessed tactical display"
+        },
+        {
+          "label": "初检",
+          "text": "发现开放边，需结合用途复核"
+        },
+        {
+          "label": "依据",
+          "text": "该对象是终端中的显示薄片，后方有独立承载结构；显示面不承担封闭体积。边界对应设计外轮廓，共享边绕序无冲突。"
+        },
+        {
+          "label": "处理",
+          "text": "此次重新计数并检查实际结构，保留显示面及原始开放边事实。"
+        },
+        {
+          "label": "复核",
+          "text": "此次Blender加载副本计数及新渲染结构复核"
+        },
+        {
+          "label": "后续",
+          "text": "在用途检查中另发现支架遮字；支架后移65mm并复验屏面无遮挡，显示面几何与UV保持不变。"
+        }
+      ],
+      "raw": {
+        "id": "A03",
+        "asset_id": "tactical_workbench",
+        "title": "终端显示面：开放边提示的用途复核",
+        "object": "Recessed tactical display",
+        "issue_class": "expected_open_boundary",
+        "sample_origin": "个人战术编辑台中的终端显示薄片。",
+        "standard": {
+          "ruleset_id": "OWN-ASSET-QA-1.0",
+          "clauses": [
+            "B01",
+            "R01"
+          ]
+        },
+        "evidence": [
+          {
+            "path": "images/03_terminal_display_boundary.png",
+            "type": "image/png",
+            "caption": "实际显示面近景，橙线为4条开放边的诊断叠加；周围为终端承载结构。",
+            "sha256": "acde01748e1be9bbb7161910cd2d254a6b59420df419e77146cfc8aa81f4903e"
+          },
+          {
+            "path": "data/fresh_boundary_checks.json",
+            "type": "application/json",
+            "caption": "此次在源工程加载副本中重新计数的几何检查结果。",
+            "sha256": "d66e58fc33c45eb3e328f2e2db05a380d3d64e2b559a25c25826a7ed4974c2fc"
+          }
+        ],
+        "initial": {
+          "status": "requires_context",
+          "label": "发现开放边，需结合用途复核",
+          "facts": {
+            "boundary_edges": 4,
+            "same_directed_shared_edges": 0
+          },
+          "note": "保留自动检测事实，不直接用4条开放边换算缺陷或分数。"
+        },
+        "review": {
+          "decision": "accepted_by_design",
+          "label": "按显示面用途接受",
+          "basis": "该对象是终端中的显示薄片，后方有独立承载结构；显示面不承担封闭体积。边界对应设计外轮廓，共享边绕序无冲突。"
+        },
+        "action": {
+          "performed": "此次重新计数并检查实际结构，保留显示面及原始开放边事实。",
+          "requested": "若用途变为具有厚度的实体屏幕，应更新规则版本并重新复核。",
+          "not_performed": "没有为了使自动计数归零而盲目填面或加厚。"
+        },
+        "recheck": {
+          "method": "此次Blender加载副本计数及新渲染结构复核",
+          "facts": {
+            "boundary_edges": 4,
+            "same_directed_shared_edges": 0,
+            "source_triangles": 2
+          }
+        },
+        "final_status": "accepted_by_design",
+        "final_label": "设计允许，保留原始提示",
+        "record_flow": [
+          {
+            "phase": "初检",
+            "description": "记录4条开放边及对象名称。"
+          },
+          {
+            "phase": "判定",
+            "description": "依据B01核对显示薄片用途和承载结构。"
+          },
+          {
+            "phase": "处理",
+            "description": "保留预期边界，不删改检测数据。"
+          },
+          {
+            "phase": "复核",
+            "description": "在新加载副本中复测，记录条件性接受。"
+          }
+        ],
+        "limitations": [
+          "接受仅针对显示薄片的设计边界。",
+          "不由这一项推断整张工作台在所有用途下都合格。"
+        ],
+        "subsequent_update": {
+          "title": "另发现并处理屏面遮挡",
+          "changed_objects": [
+            "Terminal hinge arm",
+            "Terminal hinge arm.001"
+          ],
+          "support_offset_m": 0.065,
+          "front_sampling": [
+            100,
+            60
+          ],
+          "occluded_samples_before": 154,
+          "occluded_samples_after": 0,
+          "scope": "仅支架与屏面可读性检查；原4开放边判定不变。",
+          "evidence": "../support/checks.json"
+        }
+      }
+    },
+    {
+      "id": "A04",
+      "title": "实体壁板缺面：明确退回条件",
+      "status": "待修订，未关闭问题",
+      "tone": "issue",
+      "image": "assets/cases/annotation/images/04_solid_wall_missing_face.png",
+      "imageAlt": "前方为缺面演示，橙线标记真实边界；后方为完整参考壁板。",
+      "fields": [
+        {
+          "label": "对象",
+          "text": "DEMO_SINGLE_FAULT_Solid_wall_missing_face"
+        },
+        {
+          "label": "初检",
+          "text": "实体部件发现非设计缺口"
+        },
+        {
+          "label": "依据",
+          "text": "该对象按实体壁板使用，与完整参考相比删除一面后从108降为106三角形，形成4条新边界；双面显示无法补齐实际缺失表面。"
+        },
+        {
+          "label": "处理",
+          "text": "保留完整参考与故障演示，用于说明退回判定与后续验收条件；本次未修复。"
+        },
+        {
+          "label": "复核",
+          "text": "此次重新测量完整参考与故障副本，缺面仍存在"
+        }
+      ],
+      "raw": {
+        "id": "A04",
+        "asset_id": "boundary_demo",
+        "title": "实体壁板缺面：明确退回条件",
+        "object": "DEMO_SINGLE_FAULT_Solid_wall_missing_face",
+        "issue_class": "non_design_missing_face",
+        "sample_origin": "从个人回收箱壁板制作的单故障演示副本，明确删除一个面；不是历史交付事故。",
+        "standard": {
+          "ruleset_id": "OWN-ASSET-QA-1.0",
+          "clauses": [
+            "B01",
+            "R01"
+          ]
+        },
+        "evidence": [
+          {
+            "path": "images/04_solid_wall_missing_face.png",
+            "type": "image/png",
+            "caption": "前方为缺面演示，橙线标记真实边界；后方为完整参考壁板。",
+            "sha256": "e15b6ca2e17f42a623fd501c7fa0878bc4a42370e7ed5c722ae81b22a1be6624"
+          },
+          {
+            "path": "data/fresh_boundary_checks.json",
+            "type": "application/json",
+            "caption": "完整件与缺面件的此次重测数据。",
+            "sha256": "d66e58fc33c45eb3e328f2e2db05a380d3d64e2b559a25c25826a7ed4974c2fc"
+          }
+        ],
+        "initial": {
+          "status": "needs_revision",
+          "label": "实体部件发现非设计缺口",
+          "facts": {
+            "reference_triangles": 108,
+            "reference_boundary_edges": 0,
+            "fault_triangles": 106,
+            "fault_boundary_edges": 4
+          },
+          "note": "不凭对象名猜测；对照明确的删面操作与新增边界判断。"
+        },
+        "review": {
+          "decision": "return_for_repair",
+          "label": "退回补齐实体面",
+          "basis": "该对象按实体壁板使用，与完整参考相比删除一面后从108降为106三角形，形成4条新边界；双面显示无法补齐实际缺失表面。"
+        },
+        "action": {
+          "performed": "保留完整参考与故障演示，用于说明退回判定与后续验收条件；本次未修复。",
+          "requested": "补齐缺失面，检查法线方向与UV；重新测量边界及共享边绕序，再核对完整件外形。",
+          "not_performed": "不填写修复完成或通过复验。"
+        },
+        "recheck": {
+          "method": "此次重新测量完整参考与故障副本，缺面仍存在",
+          "facts": {
+            "reference_boundary_edges": 0,
+            "fault_boundary_edges": 4,
+            "fault_same_directed_shared_edges": 0
+          },
+          "acceptance_conditions": [
+            "缺失实体面已补齐",
+            "非设计边界为0",
+            "共享边方向一致",
+            "UV与表面外形已检查"
+          ]
+        },
+        "final_status": "needs_revision",
+        "final_label": "待修订，未关闭问题",
+        "record_flow": [
+          {
+            "phase": "初检",
+            "description": "对照完整件与单故障副本。"
+          },
+          {
+            "phase": "判定",
+            "description": "按B01确认非设计缺面。"
+          },
+          {
+            "phase": "退回",
+            "description": "给出补面、法线、UV与复验要求。"
+          },
+          {
+            "phase": "当前状态",
+            "description": "缺面仍存在；保留待修订状态。"
+          }
+        ],
+        "limitations": [
+          "这是刻意构造且明确标记的单故障样例。",
+          "本条展示退回标准，不计入已完成修复数量。"
+        ]
+      }
+    }
+  ]
+}

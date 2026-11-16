@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "三维资产标注与复核记录",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "title",
+    "provenance",
+    "rules",
+    "record_count",
+    "records",
+    "status_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "id",
+        "asset_id",
+        "title",
+        "object",
+        "issue_class",
+        "sample_origin",
+        "standard",
+        "evidence",
+        "initial",
+        "review",
+        "action",
+        "recheck",
+        "final_status",
+        "final_label",
+        "record_flow",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^A[0-9]{2}$"
+        },
+        "final_status": {
+          "enum": [
+            "resolved",
+            "verified",
+            "accepted_by_design",
+            "needs_revision",
+            "requires_context"
+          ]
+        },
+        "standard": {
+          "type": "object",
+          "required": [
+            "ruleset_id",
+            "clauses"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "type",
+              "caption",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          }
+        },
+        "initial": {
+          "type": "object",
+          "required": [
+            "status",
+            "label",
+            "facts",
+            "note"
+          ]
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "decision",
+            "label",
+            "basis"
+          ]
+        },
+        "action": {
+          "type": "object",
+          "required": [
+            "performed",
+            "requested",
+            "not_performed"
+          ]
+        },
+        "recheck": {
+          "type": "object",
+          "required": [
+            "method",
+            "facts"
+          ]
+        },
+        "record_flow": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "phase",
+              "description"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

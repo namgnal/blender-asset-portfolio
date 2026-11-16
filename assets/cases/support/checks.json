@@ -1,0 +1,900 @@
+{
+  "date": "2026-11-17",
+  "purpose": "Only reposition two display supports behind the display while keeping mesh, UV and materials unchanged.",
+  "assets": [
+    {
+      "id": "tactical_workbench",
+      "before_source_sha256": "6467776ed98c8096b733e268b145b40b1ab8553d3282488dec1d0840b6906a8e",
+      "after_source_sha256": "49c2f234ff3f3b288135407beb99e202d651c58aa432dcae3c5fbbb8699309a4",
+      "changed_objects": [
+        {
+          "name": "Terminal hinge arm",
+          "old_location_m": [
+            -0.6000000238418579,
+            0.23500001430511475,
+            1.0499999523162842
+          ],
+          "new_location_m": [
+            -0.6000000238418579,
+            0.30000001192092896,
+            1.0499999523162842
+          ],
+          "translation_m": [
+            0.0,
+            0.06499999761581421,
+            0.0
+          ],
+          "geometry_fingerprint": "7a8c65e888d48540f0acde320f424fde300d42f5ffd10a06ed6741562a1067a4"
+        },
+        {
+          "name": "Terminal hinge arm.001",
+          "old_location_m": [
+            -0.25999999046325684,
+            0.23500001430511475,
+            1.0499999523162842
+          ],
+          "new_location_m": [
+            -0.25999999046325684,
+            0.30000001192092896,
+            1.0499999523162842
+          ],
+          "translation_m": [
+            0.0,
+            0.06499999761581421,
+            0.0
+          ],
+          "geometry_fingerprint": "7a8c65e888d48540f0acde320f424fde300d42f5ffd10a06ed6741562a1067a4"
+        }
+      ],
+      "before": {
+        "frontal_screen_grid": {
+          "columns": 100,
+          "rows": 60,
+          "samples": 6000,
+          "blocked_by_arms": 154,
+          "blocked_fraction": 0.025666666666666667,
+          "per_arm": {
+            "Terminal hinge arm": 77,
+            "Terminal hinge arm.001": 77
+          },
+          "method": "Uniform points on the actual display plane; 0.5m rays toward plane normal, only the two support meshes tested before reaching the screen. This is frontal projected obstruction, not a screen-space test from every angle."
+        },
+        "contacts": {
+          "Terminal hinge arm": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 34,
+            "world_bounds": {
+              "min": [
+                -0.6205000281333923,
+                0.1752239167690277,
+                0.932116687297821
+              ],
+              "max": [
+                -0.5795000195503235,
+                0.2947761118412018,
+                1.167883276939392
+              ]
+            }
+          },
+          "Terminal hinge arm.001": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 32,
+            "world_bounds": {
+              "min": [
+                -0.28049999475479126,
+                0.1752239167690277,
+                0.932116687297821
+              ],
+              "max": [
+                -0.2394999861717224,
+                0.2947761118412018,
+                1.167883276939392
+              ]
+            }
+          }
+        }
+      },
+      "after": {
+        "frontal_screen_grid": {
+          "columns": 100,
+          "rows": 60,
+          "samples": 6000,
+          "blocked_by_arms": 0,
+          "blocked_fraction": 0.0,
+          "per_arm": {
+            "Terminal hinge arm": 0,
+            "Terminal hinge arm.001": 0
+          },
+          "method": "Uniform points on the actual display plane; 0.5m rays toward plane normal, only the two support meshes tested before reaching the screen. This is frontal projected obstruction, not a screen-space test from every angle."
+        },
+        "contacts": {
+          "Terminal hinge arm": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 75,
+            "world_bounds": {
+              "min": [
+                -0.6205000281333923,
+                0.24022391438484192,
+                0.932116687297821
+              ],
+              "max": [
+                -0.5795000195503235,
+                0.359776109457016,
+                1.167883276939392
+              ]
+            }
+          },
+          "Terminal hinge arm.001": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 79,
+            "world_bounds": {
+              "min": [
+                -0.28049999475479126,
+                0.24022391438484192,
+                0.932116687297821
+              ],
+              "max": [
+                -0.2394999861717224,
+                0.359776109457016,
+                1.167883276939392
+              ]
+            }
+          }
+        }
+      },
+      "all_meshes_uv_material_assignments_unchanged": true,
+      "all_other_object_transforms_unchanged": true,
+      "packed_images": [
+        {
+          "name": "field_page.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "page_edges.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "tactical_display.png",
+          "packed": true,
+          "size": [
+            1024,
+            768
+          ]
+        },
+        {
+          "name": "walnut_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "before_glb": {
+        "sha256": "780f28d050fd53b92651fcc0d68994992d7634863bd9fa17166ade9dfd67dae7",
+        "bytes": 11881128,
+        "triangles": 28254,
+        "meshes": 93,
+        "materials": 9,
+        "images": 10,
+        "images_embedded": true,
+        "primitives_without_uv": 0
+      },
+      "after_glb": {
+        "sha256": "ad8b7ba81c2a109d80ad9065cfae267310ae073ea79e6181009a63a621e0a4d3",
+        "bytes": 11881128,
+        "triangles": 28254,
+        "meshes": 93,
+        "materials": 9,
+        "images": 10,
+        "images_embedded": true,
+        "primitives_without_uv": 0
+      },
+      "renders": [
+        {
+          "sha256": "ad69e41cc5072dd2a10dc7e2fccf1dbd2474f5a8c1fec452929855b06721e2d4",
+          "camera_location": [
+            -0.15000000596046448,
+            -1.5,
+            1.4500000476837158
+          ],
+          "target": [
+            -0.4300000071525574,
+            0.20999999344348907,
+            1.1200000047683716
+          ],
+          "ortho_scale": 0.8199999928474426,
+          "resolution": [
+            1200,
+            900
+          ],
+          "engine": "CYCLES",
+          "samples": 32
+        },
+        {
+          "sha256": "36b39f3146551645165513c2838918b8ad06c8a5c53ac49222ebc199e7f0a94e",
+          "camera_location": [
+            -0.15000000596046448,
+            -1.5,
+            1.4500000476837158
+          ],
+          "target": [
+            -0.4300000071525574,
+            0.20999999344348907,
+            1.1200000047683716
+          ],
+          "ortho_scale": 0.8199999928474426,
+          "resolution": [
+            1200,
+            900
+          ],
+          "engine": "CYCLES",
+          "samples": 32
+        },
+        {
+          "sha256": "ab5d7872cdf0f1138d04059d33a73fe44dafc029566a4f2e1fb40458eb37a5ea",
+          "camera_location": [
+            -1.100000023841858,
+            1.7999999523162842,
+            1.3799999952316284
+          ],
+          "target": [
+            -0.4300000071525574,
+            0.2849999964237213,
+            1.090000033378601
+          ],
+          "ortho_scale": 0.8799999952316284,
+          "resolution": [
+            1200,
+            900
+          ],
+          "engine": "CYCLES",
+          "samples": 32
+        },
+        {
+          "sha256": "afdc4edcc9e4f7ebdf3f9848f6d0865fb68d8fbbb1887c995b594b2343d70ddd",
+          "camera_location": [
+            2.3183751106262207,
+            -4.330869674682617,
+            3.184774160385132
+          ],
+          "target": [
+            0.0,
+            -0.025315940380096436,
+            0.7560000419616699
+          ],
+          "ortho_scale": 2.6936001777648926,
+          "resolution": [
+            1400,
+            1100
+          ],
+          "engine": "CYCLES",
+          "samples": 32
+        }
+      ],
+      "camera_basis": {
+        "center": [
+          0.0,
+          -0.025315940380096436,
+          0.7560000419616699
+        ],
+        "largest_dimension": 1.8200000524520874,
+        "full_camera_location": [
+          2.3183751106262207,
+          -4.330869674682617,
+          3.184774160385132
+        ],
+        "full_camera_target": [
+          0.0,
+          -0.025315940380096436,
+          0.7560000419616699
+        ],
+        "full_ortho_scale": 2.6936000776290894,
+        "source_camera_present": false,
+        "camera_basis": "Reconstructed exact original build_grow.py render_asset angle=(2.1,-3.9,2.2), scale=largest*1.48; original .blend saved before studio camera was created."
+      },
+      "published_source_sha256": "49c2f234ff3f3b288135407beb99e202d651c58aa432dcae3c5fbbb8699309a4",
+      "publication_metadata": "公开副本使用相对贴图和渲染输出路径；模型网格/UV/材质与已检查版本一致。"
+    },
+    {
+      "id": "post_battle_corner",
+      "before_source_sha256": "c7ca7f91091c3e86a529a74c387a8a3b615e51efbb4c19e4b9ea26608244c79b",
+      "after_source_sha256": "c5f6c7c79286fe9bf3ee1772805c2b84597d151aa4b7afc5ea81fb51d088bf15",
+      "changed_objects": [
+        {
+          "name": "Terminal hinge arm",
+          "old_location_m": [
+            -0.6000000238418579,
+            0.23500001430511475,
+            1.0499999523162842
+          ],
+          "new_location_m": [
+            -0.6000000238418579,
+            0.30000001192092896,
+            1.0499999523162842
+          ],
+          "translation_m": [
+            0.0,
+            0.06499999761581421,
+            0.0
+          ],
+          "geometry_fingerprint": "e68a8e427617ea34a50a146b82e68170c17829d4539b58c33e701c536a78684a"
+        },
+        {
+          "name": "Terminal hinge arm.001",
+          "old_location_m": [
+            -0.25999999046325684,
+            0.23500001430511475,
+            1.0499999523162842
+          ],
+          "new_location_m": [
+            -0.25999999046325684,
+            0.30000001192092896,
+            1.0499999523162842
+          ],
+          "translation_m": [
+            0.0,
+            0.06499999761581421,
+            0.0
+          ],
+          "geometry_fingerprint": "e68a8e427617ea34a50a146b82e68170c17829d4539b58c33e701c536a78684a"
+        }
+      ],
+      "before": {
+        "frontal_screen_grid": {
+          "columns": 100,
+          "rows": 60,
+          "samples": 6000,
+          "blocked_by_arms": 154,
+          "blocked_fraction": 0.025666666666666667,
+          "per_arm": {
+            "Terminal hinge arm": 77,
+            "Terminal hinge arm.001": 77
+          },
+          "method": "Uniform points on the actual display plane; 0.5m rays toward plane normal, only the two support meshes tested before reaching the screen. This is frontal projected obstruction, not a screen-space test from every angle."
+        },
+        "contacts": {
+          "Terminal hinge arm": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 34,
+            "world_bounds": {
+              "min": [
+                -0.6205000281333923,
+                0.1752239167690277,
+                0.932116687297821
+              ],
+              "max": [
+                -0.5795000195503235,
+                0.2947761118412018,
+                1.167883276939392
+              ]
+            }
+          },
+          "Terminal hinge arm.001": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 32,
+            "world_bounds": {
+              "min": [
+                -0.28049999475479126,
+                0.1752239167690277,
+                0.932116687297821
+              ],
+              "max": [
+                -0.2394999861717224,
+                0.2947761118412018,
+                1.167883276939392
+              ]
+            }
+          }
+        }
+      },
+      "after": {
+        "frontal_screen_grid": {
+          "columns": 100,
+          "rows": 60,
+          "samples": 6000,
+          "blocked_by_arms": 0,
+          "blocked_fraction": 0.0,
+          "per_arm": {
+            "Terminal hinge arm": 0,
+            "Terminal hinge arm.001": 0
+          },
+          "method": "Uniform points on the actual display plane; 0.5m rays toward plane normal, only the two support meshes tested before reaching the screen. This is frontal projected obstruction, not a screen-space test from every angle."
+        },
+        "contacts": {
+          "Terminal hinge arm": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 75,
+            "world_bounds": {
+              "min": [
+                -0.6205000281333923,
+                0.24022391438484192,
+                0.932116687297821
+              ],
+              "max": [
+                -0.5795000195503235,
+                0.359776109457016,
+                1.167883276939392
+              ]
+            }
+          },
+          "Terminal hinge arm.001": {
+            "heel_surface_intersection_pairs": 35,
+            "rear_case_surface_intersection_pairs": 79,
+            "world_bounds": {
+              "min": [
+                -0.28049999475479126,
+                0.24022391438484192,
+                0.932116687297821
+              ],
+              "max": [
+                -0.2394999861717224,
+                0.359776109457016,
+                1.167883276939392
+              ]
+            }
+          }
+        }
+      },
+      "all_meshes_uv_material_assignments_unchanged": true,
+      "all_other_object_transforms_unchanged": true,
+      "packed_images": [
+        {
+          "name": "field_page.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "field_page.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_basecolor.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_basecolor.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_normal.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_normal.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_roughness.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "green_leather_roughness.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_basecolor.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_basecolor.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_normal.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_normal.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_roughness.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "linen_roughness.png.002",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "page_edges.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "page_edges.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_basecolor.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_normal.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "saddle_leather_roughness.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "tactical_display.png",
+          "packed": true,
+          "size": [
+            1024,
+            768
+          ]
+        },
+        {
+          "name": "tactical_display.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            768
+          ]
+        },
+        {
+          "name": "walnut_basecolor.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_basecolor.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_normal.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_normal.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_roughness.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "walnut_roughness.png.001",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "before_glb": {
+        "sha256": "f0be65b08c47340bb62114fee2ac5d0423f6f632239d04e7b7f7950f5cc9dcd9",
+        "bytes": 16712844,
+        "triangles": 49288,
+        "meshes": 233,
+        "materials": 18,
+        "images": 15,
+        "images_embedded": true,
+        "primitives_without_uv": 0
+      },
+      "after_glb": {
+        "sha256": "27ebaf068372e4f805e2a48ceed8467917f450d9072b6aaab375d5fe4a6ec7af",
+        "bytes": 16712904,
+        "triangles": 49288,
+        "meshes": 233,
+        "materials": 18,
+        "images": 15,
+        "images_embedded": true,
+        "primitives_without_uv": 0
+      },
+      "renders": [
+        {
+          "sha256": "5b0054f27337fa833f42a7bf6a668edb824c3545a2270f74e879d37adc55eb18",
+          "camera_location": [
+            2.3183751106262207,
+            -4.330869674682617,
+            3.184774160385132
+          ],
+          "target": [
+            0.0,
+            -0.025315940380096436,
+            0.7560000419616699
+          ],
+          "ortho_scale": 2.6936001777648926,
+          "resolution": [
+            1400,
+            1100
+          ],
+          "engine": "CYCLES",
+          "samples": 32
+        }
+      ],
+      "camera_basis": {
+        "center": [
+          0.0,
+          -0.025315940380096436,
+          0.7560000419616699
+        ],
+        "largest_dimension": 1.8200000524520874,
+        "full_camera_location": [
+          2.3183751106262207,
+          -4.330869674682617,
+          3.184774160385132
+        ],
+        "full_camera_target": [
+          0.0,
+          -0.025315940380096436,
+          0.7560000419616699
+        ],
+        "full_ortho_scale": 2.6936000776290894,
+        "source_camera_present": false,
+        "camera_basis": "Reconstructed exact original build_grow.py render_asset angle=(2.1,-3.9,2.2), scale=largest*1.48; original .blend saved before studio camera was created."
+      },
+      "published_source_sha256": "c5f6c7c79286fe9bf3ee1772805c2b84597d151aa4b7afc5ea81fb51d088bf15",
+      "publication_metadata": "公开副本使用相对贴图和渲染输出路径；模型网格/UV/材质与已检查版本一致。"
+    }
+  ],
+  "limitations": [
+    "Frontal screen obstruction grid only evaluates support occlusion, not general scene collisions or every viewing angle.",
+    "Contact checks report surface intersections of intended joints; they do not constitute mechanical stress or tolerance certification."
+  ],
+  "visual_review": "已逐一查看修订前正面、修订后同机位正面、修订后后侧连接、战术台预览、组合场景预览。支架不再遮挡屏幕底部文字；后侧可见支架与底座及后壳连接。",
+  "saved_roundtrip_verification": "saved_and_roundtrip_verification.json：两份保存工程重新打开、两份GLB独立回导后，支架正面遮挡采样均为0；几何数量不变，所有图像已打包并使用相对路径。Windows重开会将相对路径分隔符显示为反斜杠，验证按标准化斜杠比较。"
+}

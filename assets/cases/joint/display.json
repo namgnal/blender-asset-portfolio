@@ -1,0 +1,62 @@
+{
+  "description": "用同一份连续网格设置硬切权重与远端误权重对照，再修订为渐变权重。检查0°、45°、90°、120°和回到静止位的五个姿态，分别核对轮廓、异常拉扯与导出动作。",
+  "images": [
+    {
+      "src": "assets/cases/joint/images/comparison_90.png",
+      "alt": "90度屈曲时异常权重与修订权重的对照",
+      "caption": "90° 屈曲：修订前的远端误权重产生长刺，修订后轮廓连续。",
+      "width": 1600,
+      "height": 1100
+    },
+    {
+      "src": "assets/cases/joint/images/weights_rest.png",
+      "alt": "同一网格的硬切权重与渐变权重对照",
+      "caption": "前臂骨权重：蓝色为0，红色为1；修订后关节附近形成渐变过渡。",
+      "width": 1600,
+      "height": 1100
+    }
+  ],
+  "findings": [
+    {
+      "title": "228 顶点 / 452 三角形",
+      "text": "同一网格，216个四边形与2个端盖；在关节附近组织循环拓扑，避免用更换网格混淆权重对照。"
+    },
+    {
+      "title": "84 个渐变权重点",
+      "text": "修订远端误归属，并在关节区域平滑分配两根骨骼权重；结合多角度姿态检查实际变形。"
+    },
+    {
+      "title": "源工程与 GLB 动作一致",
+      "text": "2根骨骼、1个61帧动作。五个关键姿态源/回导最大位置误差约1.25×10⁻⁷m，在本例10⁻⁵m容差内。"
+    }
+  ],
+  "downloads": [
+    {
+      "label": "播放修订后模型 ↗",
+      "href": "index.html?asset=elbow_corrected#workbench"
+    },
+    {
+      "label": "查看修订前对照 ↗",
+      "href": "index.html?asset=elbow_before#workbench"
+    },
+    {
+      "label": "下载对照源工程 ↓",
+      "href": "assets/cases/joint/elbow_deformation_comparison.blend",
+      "download": true
+    },
+    {
+      "label": "完整检查 JSON ↓",
+      "href": "assets/cases/joint/evidence.json",
+      "download": true
+    },
+    {
+      "label": "查看四边形拓扑 ↗",
+      "href": "assets/cases/joint/images/topology_rest.png"
+    },
+    {
+      "label": "查看120°姿态 ↗",
+      "href": "assets/cases/joint/images/comparison_120.png"
+    }
+  ],
+  "scope": "检查范围：原创局部肘关节、线性蒙皮、五个关键姿态与 glTF 回导。修订前版本作为问题对照。"
+}

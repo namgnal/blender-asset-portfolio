@@ -1,0 +1,146 @@
+[
+  {
+    "asset": "tactical_workbench",
+    "saved_source_sha256": "49c2f234ff3f3b288135407beb99e202d651c58aa432dcae3c5fbbb8699309a4",
+    "saved_images": [
+      {
+        "name": "green_leather_basecolor.png",
+        "packed": true
+      },
+      {
+        "name": "green_leather_normal.png",
+        "packed": true
+      },
+      {
+        "name": "green_leather_roughness.png",
+        "packed": true
+      },
+      {
+        "name": "linen_basecolor.png",
+        "packed": true
+      },
+      {
+        "name": "linen_normal.png",
+        "packed": true
+      },
+      {
+        "name": "linen_roughness.png",
+        "packed": true
+      },
+      {
+        "name": "tactical_display.png",
+        "packed": true
+      },
+      {
+        "name": "walnut_basecolor.png",
+        "packed": true
+      },
+      {
+        "name": "walnut_normal.png",
+        "packed": true
+      },
+      {
+        "name": "walnut_roughness.png",
+        "packed": true
+      }
+    ],
+    "saved_source_frontal_obstruction_samples": 0,
+    "glb_import_frontal_obstruction_samples": 0,
+    "glb_import_triangles": 28254,
+    "image_decode": false
+  },
+  {
+    "asset": "post_battle_corner",
+    "saved_source_sha256": "c5f6c7c79286fe9bf3ee1772805c2b84597d151aa4b7afc5ea81fb51d088bf15",
+    "saved_images": [
+      {
+        "name": "field_page.png.001",
+        "packed": true
+      },
+      {
+        "name": "green_leather_basecolor.png.001",
+        "packed": true
+      },
+      {
+        "name": "green_leather_basecolor.png.002",
+        "packed": true
+      },
+      {
+        "name": "green_leather_normal.png.001",
+        "packed": true
+      },
+      {
+        "name": "green_leather_normal.png.002",
+        "packed": true
+      },
+      {
+        "name": "green_leather_roughness.png.001",
+        "packed": true
+      },
+      {
+        "name": "green_leather_roughness.png.002",
+        "packed": true
+      },
+      {
+        "name": "linen_basecolor.png.001",
+        "packed": true
+      },
+      {
+        "name": "linen_basecolor.png.002",
+        "packed": true
+      },
+      {
+        "name": "linen_normal.png.001",
+        "packed": true
+      },
+      {
+        "name": "linen_normal.png.002",
+        "packed": true
+      },
+      {
+        "name": "linen_roughness.png.001",
+        "packed": true
+      },
+      {
+        "name": "linen_roughness.png.002",
+        "packed": true
+      },
+      {
+        "name": "page_edges.png.001",
+        "packed": true
+      },
+      {
+        "name": "saddle_leather_basecolor.png.001",
+        "packed": true
+      },
+      {
+        "name": "saddle_leather_normal.png.001",
+        "packed": true
+      },
+      {
+        "name": "saddle_leather_roughness.png.001",
+        "packed": true
+      },
+      {
+        "name": "tactical_display.png.001",
+        "packed": true
+      },
+      {
+        "name": "walnut_basecolor.png.001",
+        "packed": true
+      },
+      {
+        "name": "walnut_normal.png.001",
+        "packed": true
+      },
+      {
+        "name": "walnut_roughness.png.001",
+        "packed": true
+      }
+    ],
+    "saved_source_frontal_obstruction_samples": 0,
+    "glb_import_frontal_obstruction_samples": 0,
+    "glb_import_triangles": 49288,
+    "image_decode": false
+  }
+]

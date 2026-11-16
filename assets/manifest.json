@@ -1,0 +1,511 @@
+{
+  "author": "namgnal",
+  "release": "2026-11-17",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 67,
+      "sha256": "64f02713eeeb17f35b3ba7022e3f9110a853475f362509bf4f31853484cac218"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 71,
+      "sha256": "a45875c63106544a4642410797de03abec4a0dea32fc50d45b67b054a09a22a5"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app.js",
+      "bytes": 26185,
+      "sha256": "945042ac272ac9cffa45bce00575d22dd26bb9ea35ab7e702458b3b41f48dfa5"
+    },
+    {
+      "path": "assets/cases/annotation/annotation_records.schema.json",
+      "bytes": 2991,
+      "sha256": "a3b84680b5789950e94d198c299d6dface13ddfdb899f0f62ada55a5daaf8735"
+    },
+    {
+      "path": "assets/cases/annotation/data/export_check.json",
+      "bytes": 845,
+      "sha256": "28258ca231e38d52038188d1f3fab50bc91238f7390a953c5c90e23b92114857"
+    },
+    {
+      "path": "assets/cases/annotation/data/fresh_boundary_checks.json",
+      "bytes": 3457,
+      "sha256": "d66e58fc33c45eb3e328f2e2db05a380d3d64e2b559a25c25826a7ed4974c2fc"
+    },
+    {
+      "path": "assets/cases/annotation/display.json",
+      "bytes": 19147,
+      "sha256": "601fbfe2e7d3f94bdb7ee0fcb07920cc8ab9cac80848125b7d487dd25a5cb297"
+    },
+    {
+      "path": "assets/cases/annotation/images/01_lid_normals_before_after.png",
+      "bytes": 955780,
+      "sha256": "cb54682be2dcf74af42c5e12b36ae797db05a85202b0a9882a565a170f9941a1"
+    },
+    {
+      "path": "assets/cases/annotation/images/02_placard_texture_chain.png",
+      "bytes": 187828,
+      "sha256": "9fa8220313d8994494a7abb86ef0c7012ddc36ee1b7c2e7b145badac99698bbf"
+    },
+    {
+      "path": "assets/cases/annotation/images/03_terminal_display_boundary.png",
+      "bytes": 1603456,
+      "sha256": "acde01748e1be9bbb7161910cd2d254a6b59420df419e77146cfc8aa81f4903e"
+    },
+    {
+      "path": "assets/cases/annotation/images/04_solid_wall_missing_face.png",
+      "bytes": 1339134,
+      "sha256": "e15b6ca2e17f42a623fd501c7fa0878bc4a42370e7ed5c722ae81b22a1be6624"
+    },
+    {
+      "path": "assets/cases/annotation/records.json",
+      "bytes": 14997,
+      "sha256": "0ce8aa15e82d000673976f28c806d32eb1eae1928a393637554d957d3cd6485c"
+    },
+    {
+      "path": "assets/cases/annotation/rules.json",
+      "bytes": 1681,
+      "sha256": "5a1a04b2d5ba934b18b701f7b3dda17257dc678690a95a7d9ff563c62e07f4cc"
+    },
+    {
+      "path": "assets/cases/annotation/source/boundary_demo.blend",
+      "bytes": 91902,
+      "sha256": "0fdb2895b5c19afcdf7803510a69d0533f54e134d4b95140d430d46179ef1847"
+    },
+    {
+      "path": "assets/cases/annotation/source/boundary_demo.glb",
+      "bytes": 17180,
+      "sha256": "7bfba17ecf7350c1ba1e25494205537b715387ab8b7b9d99ceca948bed149b8e"
+    },
+    {
+      "path": "assets/cases/crate_normals.png",
+      "bytes": 955780,
+      "sha256": "cb54682be2dcf74af42c5e12b36ae797db05a85202b0a9882a565a170f9941a1"
+    },
+    {
+      "path": "assets/cases/crate_uv.png",
+      "bytes": 187828,
+      "sha256": "9fa8220313d8994494a7abb86ef0c7012ddc36ee1b7c2e7b145badac99698bbf"
+    },
+    {
+      "path": "assets/cases/joint/display.json",
+      "bytes": 2396,
+      "sha256": "31694c0684aad289a7bd0d40fe7605c7dc82543d247615366e6e8a16bb98e6e8"
+    },
+    {
+      "path": "assets/cases/joint/elbow_before.glb",
+      "bytes": 28580,
+      "sha256": "9cc74d01c6ae3cf7c4ba62422029abe3ec272011f78082f3f30307d53d693091"
+    },
+    {
+      "path": "assets/cases/joint/elbow_corrected.glb",
+      "bytes": 28596,
+      "sha256": "11ad43bbb4aa4501a728e621db6fe839c8e32efe431e6342fee99acf5fb386b5"
+    },
+    {
+      "path": "assets/cases/joint/elbow_deformation_comparison.blend",
+      "bytes": 119449,
+      "sha256": "79b6900fec13a677552a5d15e86097e0e647428f91ac223fc19d67a8681ce04b"
+    },
+    {
+      "path": "assets/cases/joint/evidence.json",
+      "bytes": 8473,
+      "sha256": "9278dea66b3933e3747be140cbab0740f4a71c62268f2c8efc8b18da37dae10e"
+    },
+    {
+      "path": "assets/cases/joint/images/comparison_120.png",
+      "bytes": 1759181,
+      "sha256": "959d7ce8b01ca239f754815cb6bdc49e815a6f3743781a6b90e11a67fad30dc2"
+    },
+    {
+      "path": "assets/cases/joint/images/comparison_90.png",
+      "bytes": 1707796,
+      "sha256": "b5f361d4bcac5637cfdf85112de3fff972f96e222bf22fcb8fa2e969fdca1da1"
+    },
+    {
+      "path": "assets/cases/joint/images/rest_material.png",
+      "bytes": 1702981,
+      "sha256": "7316c8365f34572457e998d6f3d90920afda250f83b1face6edc41583ce0eca6"
+    },
+    {
+      "path": "assets/cases/joint/images/topology_rest.png",
+      "bytes": 1797639,
+      "sha256": "f90de2343cd29e827ca06990b9cd255e21aba10216bc8ced48f5a0f331dfb06f"
+    },
+    {
+      "path": "assets/cases/joint/images/weights_rest.png",
+      "bytes": 1721488,
+      "sha256": "42b1a825b775d3b67ac37c08b8c5e77d6df07afff3bd3f83b4239c34743ca0d7"
+    },
+    {
+      "path": "assets/cases/support/checks.json",
+      "bytes": 25345,
+      "sha256": "cf1d0a1e16f3094386b0e968ae5b3900ee44adc71fa6a963e1bea710383b3acc"
+    },
+    {
+      "path": "assets/cases/support/saved_and_roundtrip_verification.json",
+      "bytes": 3406,
+      "sha256": "f9d5333e818cb14a665cfd44786e13d7fb6bf1828ecfe154e89a69a6ab8edb3b"
+    },
+    {
+      "path": "assets/cases/support/support_after_front.png",
+      "bytes": 1110330,
+      "sha256": "36b39f3146551645165513c2838918b8ad06c8a5c53ac49222ebc199e7f0a94e"
+    },
+    {
+      "path": "assets/cases/support/support_after_rear_connection.png",
+      "bytes": 1278598,
+      "sha256": "ab5d7872cdf0f1138d04059d33a73fe44dafc029566a4f2e1fb40458eb37a5ea"
+    },
+    {
+      "path": "assets/cases/support/support_before_front.png",
+      "bytes": 1114747,
+      "sha256": "ad69e41cc5072dd2a10dc7e2fccf1dbd2474f5a8c1fec452929855b06721e2d4"
+    },
+    {
+      "path": "assets/catalog.json",
+      "bytes": 29341,
+      "sha256": "3427d6e3a4ea8ebdb0acacdc7f40417dfe1d59c6e4e069509d55c2d0f2d03f5a"
+    },
+    {
+      "path": "assets/catalog.schema.json",
+      "bytes": 2285,
+      "sha256": "9db7e45982f72e1329d9b80f94167cabe2082ca9700775c58cf6ce1e2c75688e"
+    },
+    {
+      "path": "assets/documents/三维资产作品集.pdf",
+      "bytes": 2502350,
+      "sha256": "191d6bf67174dbf246c8980b0970f3afdf1f1f7806dfbfd1a1b63d18606d3fb4"
+    },
+    {
+      "path": "assets/documents/三维资产标注与复核案例.pdf",
+      "bytes": 4602290,
+      "sha256": "a9050bd7304f899ddf1ecefb24f656ffd8ab101298c65b407903316f0f6a8614"
+    },
+    {
+      "path": "assets/documents/关节变形与标注复核.pdf",
+      "bytes": 495840,
+      "sha256": "635f68f8e6eca445d67e60078fda2abeb5c587ec3097025285f00fe0f4246fbb"
+    },
+    {
+      "path": "assets/evidence/crate_open.png",
+      "bytes": 1707495,
+      "sha256": "96e8ffd2536db71e9dea59f6d2ed288e0cbb39617687aa36ea8a46c3ad289402"
+    },
+    {
+      "path": "assets/evidence/ship_wire.png",
+      "bytes": 143886,
+      "sha256": "96cdfa705926d20f1590fe45b8756b1f875ad045184ae0769c5338f76587f4a6"
+    },
+    {
+      "path": "assets/evidence.json",
+      "bytes": 94,
+      "sha256": "9fb1bbf1787fd503df43da9e0e7a3c7bb202082842c59af35b4e3e3746ae7fc9"
+    },
+    {
+      "path": "assets/models/coastal_rocks.glb",
+      "bytes": 53368,
+      "sha256": "27c5a4eef76583b2a6dd55c0e80f904f96f25134e7d5ab9134a1b9af3b77aaa8"
+    },
+    {
+      "path": "assets/models/coastal_rocks_lod1.glb",
+      "bytes": 21184,
+      "sha256": "b13a4033bbf96753495050dd67ff3ee5ac2bed14d54dd590f9cda5ffef6d8d64"
+    },
+    {
+      "path": "assets/models/combat_field_journal.glb",
+      "bytes": 12398372,
+      "sha256": "75cd6ffc93bc87af3e8e0f1094474c77a6544e4b7fd354153f3c98c56e854a4e"
+    },
+    {
+      "path": "assets/models/field_cart.glb",
+      "bytes": 985116,
+      "sha256": "355ef797bea0006ebf8374206444db19d1065a35036f9d188772f241f7c6e04e"
+    },
+    {
+      "path": "assets/models/flux_energy_core.glb",
+      "bytes": 179372,
+      "sha256": "78403c08a96f3737e285e8727dfd7438909967af8938b7ea8cfc192a565638ab"
+    },
+    {
+      "path": "assets/models/kestrel_rescue_ship.glb",
+      "bytes": 560760,
+      "sha256": "05c9e676a82d3dd127641410abad8d631763b9600cdbfd91dc1b8758c01bee6a"
+    },
+    {
+      "path": "assets/models/mender_maintenance_drone.glb",
+      "bytes": 425400,
+      "sha256": "ab33180307cb4a06c43cfaadec85c67fc50c7f31145ecaffb6bb060872a7772c"
+    },
+    {
+      "path": "assets/models/post_battle_corner.glb",
+      "bytes": 16712904,
+      "sha256": "27ebaf068372e4f805e2a48ceed8467917f450d9072b6aaab375d5fe4a6ec7af"
+    },
+    {
+      "path": "assets/models/reed_patch.glb",
+      "bytes": 234000,
+      "sha256": "1131f7d58d36e7939c8d6c76732dd23db7a7945f23968c81b27eb012ea49823a"
+    },
+    {
+      "path": "assets/models/reed_patch_lod1.glb",
+      "bytes": 83700,
+      "sha256": "6f2064dbf339ae3612512e5616e2ca826101a8dd84e269c53057b99e7880514b"
+    },
+    {
+      "path": "assets/models/rescue_supply_crate.glb",
+      "bytes": 426280,
+      "sha256": "aa6235884d62627b66e7b6862f9e103bd199bb73a33e36d0e1f76f61089651de"
+    },
+    {
+      "path": "assets/models/tactical_workbench.glb",
+      "bytes": 11881128,
+      "sha256": "ad8b7ba81c2a109d80ad9065cfae267310ae073ea79e6181009a63a621e0a4d3"
+    },
+    {
+      "path": "assets/models/tidal_field_scene.glb",
+      "bytes": 3002672,
+      "sha256": "5216747bfb2a701cb4a3beb8188af804aa95ad4ae1da2a5228cd83bed2896422"
+    },
+    {
+      "path": "assets/models/tidal_station.glb",
+      "bytes": 532528,
+      "sha256": "33ca067c67b846469943109842b7e78988d0f8d5af1b346a58443b2d409c593e"
+    },
+    {
+      "path": "assets/previews/coastal_rocks.jpg",
+      "bytes": 48575,
+      "sha256": "c3c4eb8a7c31c9639af0a807075e103cfee2c621bc737b291b98bb9a37f5ef81"
+    },
+    {
+      "path": "assets/previews/coastal_rocks_lod1.jpg",
+      "bytes": 42099,
+      "sha256": "f47097d607324930744db853c77531fb0a3fafff12812817b6a1d3f2e4fc93a3"
+    },
+    {
+      "path": "assets/previews/combat_field_journal.jpg",
+      "bytes": 166334,
+      "sha256": "95b83121adb017831c57049a21ca6cb0160523f85c577f52a8d28bb095ee52a0"
+    },
+    {
+      "path": "assets/previews/field_cart.jpg",
+      "bytes": 104111,
+      "sha256": "010285ca53eac81ff5832fbea99a5dee8fcc4d7080e235a43895739dec6d2aed"
+    },
+    {
+      "path": "assets/previews/flux_energy_core.jpg",
+      "bytes": 60634,
+      "sha256": "9c85705e289db8c5e10f7a6e7626abf2a376d65f4c3d5025871f30acd52eb551"
+    },
+    {
+      "path": "assets/previews/kestrel_rescue_ship.jpg",
+      "bytes": 97282,
+      "sha256": "9be097405187af5f80dd95b2dca47dd47d47b8b1aeba152a0351b2a6c9816361"
+    },
+    {
+      "path": "assets/previews/mender_maintenance_drone.jpg",
+      "bytes": 78415,
+      "sha256": "868a4eee5c0cdcede844564c9a13347d1583c10b27c46f16219458c07e3e0bfe"
+    },
+    {
+      "path": "assets/previews/post_battle_corner.jpg",
+      "bytes": 185392,
+      "sha256": "5b0054f27337fa833f42a7bf6a668edb824c3545a2270f74e879d37adc55eb18"
+    },
+    {
+      "path": "assets/previews/reed_patch.jpg",
+      "bytes": 76381,
+      "sha256": "43cec7581390572120a5f8a73e1b3fe8cb6a50812cac9e53d53fa38d0cb1d2e1"
+    },
+    {
+      "path": "assets/previews/reed_patch_lod1.jpg",
+      "bytes": 59962,
+      "sha256": "d2c72be35afe29cacef418c4ed0fbc5d4103bc0eaea501e650350d73f4af3f2d"
+    },
+    {
+      "path": "assets/previews/rescue_supply_crate.jpg",
+      "bytes": 122244,
+      "sha256": "e94b26e354afb14c57f9e5705e711341e186d732fe40c5e64b6e52ae1c5fd07e"
+    },
+    {
+      "path": "assets/previews/tactical_workbench.jpg",
+      "bytes": 174975,
+      "sha256": "afdc4edcc9e4f7ebdf3f9848f6d0865fb68d8fbbb1887c995b594b2343d70ddd"
+    },
+    {
+      "path": "assets/previews/tidal_field_scene.jpg",
+      "bytes": 86868,
+      "sha256": "52f8725fca602d761605091f6e1a6fc39dd8400fa7a64d29baddf3d602c657c4"
+    },
+    {
+      "path": "assets/previews/tidal_station.jpg",
+      "bytes": 57381,
+      "sha256": "696cb924c9bd17bfa7b7974bbaadec889cba4e44da9a1ff558642d58a22837fc"
+    },
+    {
+      "path": "assets/source/coastal_rocks.blend",
+      "bytes": 106166,
+      "sha256": "571a28330cf3fbc78069b83ed0b14274be3afcf269420fbe666f47006ca0edb4"
+    },
+    {
+      "path": "assets/source/coastal_rocks_lod1.blend",
+      "bytes": 98854,
+      "sha256": "2626c62ad185b4cf1c5d3fc795e273c582137b6b21ac9eb69be1ab1027b4186d"
+    },
+    {
+      "path": "assets/source/combat_field_journal.blend",
+      "bytes": 11544353,
+      "sha256": "af06a0ef9ad1bedb45a6a2eda5289a314cae078325f0241fb282c9ef7a5b8d74"
+    },
+    {
+      "path": "assets/source/field_cart.blend",
+      "bytes": 170057,
+      "sha256": "bab45a71489f78b979886e0c9ec899dab1dc134b2fd83be31d06c759e525c93f"
+    },
+    {
+      "path": "assets/source/flux_energy_core.blend",
+      "bytes": 148277,
+      "sha256": "008e35559fd1d6f08fde356e8dba6536d2542ec32d5eb199fb8c8bfda11f3348"
+    },
+    {
+      "path": "assets/source/kestrel_rescue_ship.blend",
+      "bytes": 316395,
+      "sha256": "109c011e10e91ae5f45b6bbd157330aff072d64828ed8963546acb97ef73e9c8"
+    },
+    {
+      "path": "assets/source/mender_maintenance_drone.blend",
+      "bytes": 228840,
+      "sha256": "3d0265479648a42c89b10c0239c96485dd716d541423a45c3001134e42207483"
+    },
+    {
+      "path": "assets/source/post_battle_corner.blend",
+      "bytes": 28097748,
+      "sha256": "c5f6c7c79286fe9bf3ee1772805c2b84597d151aa4b7afc5ea81fb51d088bf15"
+    },
+    {
+      "path": "assets/source/reed_patch.blend",
+      "bytes": 119000,
+      "sha256": "9834e5530cacce678d8b36f58f728cf65b8f5f08ed3a6b3cd8c6039b10a11915"
+    },
+    {
+      "path": "assets/source/reed_patch_lod1.blend",
+      "bytes": 106085,
+      "sha256": "3159860fab8b4034d156a238541bdbf2c558f36a5fc13ed2edb8a128fb50164e"
+    },
+    {
+      "path": "assets/source/rescue_supply_crate.blend",
+      "bytes": 242819,
+      "sha256": "17077f6e46d679b52352d4c2ddc164867a349ba3659faaf9e72dc363b919d541"
+    },
+    {
+      "path": "assets/source/tactical_workbench.blend",
+      "bytes": 13962470,
+      "sha256": "49c2f234ff3f3b288135407beb99e202d651c58aa432dcae3c5fbbb8699309a4"
+    },
+    {
+      "path": "assets/source/textures/field08_label.png",
+      "bytes": 38543,
+      "sha256": "aaf3f4cce20095ab97e8f9e5583af2c5b672ea583bed3877d7d16d601216d2fe"
+    },
+    {
+      "path": "assets/source/tidal_field_scene.blend",
+      "bytes": 501958,
+      "sha256": "031ececf5c434bc61ce07ec1709c161cb27fe5e27d24b9ddaf41886970e767a5"
+    },
+    {
+      "path": "assets/source/tidal_station.blend",
+      "bytes": 178928,
+      "sha256": "6ba5041777f86d5383f136b0a6838c0a9c70629aa3cf7326b1e336850a8c53ec"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11256,
+      "sha256": "2400c5f1bbe894790c9816af3cb3037d6728fd5dd400363d36aa1ebb710c3988"
+    },
+    {
+      "path": "LICENSE-code.txt",
+      "bytes": 1268,
+      "sha256": "d18a8a82691bc149fb210cb65d47da17cfb441559e800730f966734132b2944e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1702,
+      "sha256": "144b8f169a13d0c8337a6b458f8826deacb5bfbc803e09b69fee4ac08c899d8d"
+    },
+    {
+      "path": "review.css",
+      "bytes": 7847,
+      "sha256": "8576c5cd81c3079bee9d6c5ff6b6fc4691e007753e6951d0150cdf7182c8ea14"
+    },
+    {
+      "path": "review.html",
+      "bytes": 10053,
+      "sha256": "e2641c9a65412105b98725b64fbba006c585395946a666498dc90723985f3f80"
+    },
+    {
+      "path": "review.js",
+      "bytes": 3342,
+      "sha256": "81424b9e8573846bdac2d9bcb17ff9cc98bb7fc41192fceb6e41a462ddcaa2d5"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 18542,
+      "sha256": "d622d202ace0b724fa6547d4d888adec038dd1fdf795a9658b390bb43a6665c0"
+    },
+    {
+      "path": "vendor/three/build/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three/build/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "vendor/three/examples/jsm/controls/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "vendor/three/examples/jsm/environments/RoomEnvironment.js",
+      "bytes": 4960,
+      "sha256": "55f466192cc84298755a424c5e040345006b2ee1455589b3b54126c2ea4123f4"
+    },
+    {
+      "path": "vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "path": "vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "path": "vendor/three/examples/jsm/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "path": "vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three/package.json",
+      "bytes": 3672,
+      "sha256": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+    },
+    {
+      "path": "vendor/three/vendor-manifest.json",
+      "bytes": 1672,
+      "sha256": "0fea9d5135c22f186e477fe2eb2214bf2f8451c345f827a38edfb7ea9dd6302f"
+    }
+  ]
+}
