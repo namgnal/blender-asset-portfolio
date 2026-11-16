@@ -18,23 +18,23 @@
   <header class="site-header">
     <a class="brand" href="#" aria-label="namgnal 作品首页"><span class="brand-mark" aria-hidden="true">n.</span><span>namgnal<small>3D ASSET PORTFOLIO</small></span></a>
     <nav class="header-nav" aria-label="页面导航"><a href="#workbench" class="current">作品</a><a href="review.html">技术案例</a><a href="#experience">项目经历 <span aria-hidden="true">↗</span></a></nav>
-    <span class="header-note">游戏资产 / 环境造物</span>
+    <span class="header-note">角色 / 道具 / 环境</span>
   </header>
 
   <main>
     <section class="intro" aria-labelledby="page-title">
       <div><h1 id="page-title">三维资产作品台<span class="title-dot">.</span></h1></div>
-      <p class="intro-note">游戏场景、交互道具与环境资产。<br>查看模型、材质与动作，打开源工程检查细节。</p>
+      <p class="intro-note">完整角色、交互道具与环境资产。<br>查看模型、材质与动作，打开源工程检查细节。</p>
     </section>
 
 
     <nav class="evidence-nav" aria-label="按能力查看证据">
       <a href="review.html#production"><span>资产制作</span><small>用途、面数与 LOD</small><b aria-hidden="true">↗</b></a>
       <a href="review.html#inspection"><span>源模型质检</span><small>问题、处理与复验</small><b aria-hidden="true">↗</b></a>
-      <a href="review.html#deformation"><span>关节与动作</span><small>拓扑、权重与屈曲</small><b aria-hidden="true">↗</b></a>
+      <a href="character.html"><span>完整角色</span><small>拓扑、贴图、绑定与动作</small><b aria-hidden="true">↗</b></a>
       <a href="review.html#annotation"><span>标注与复核</span><small>规则、记录与结论</small><b aria-hidden="true">↗</b></a>
     </nav>
-    <p class="static-access">直接阅读：<a href="assets/documents/三维资产作品集.pdf" target="_blank" rel="noopener">作品集 PDF ↗</a><a href="assets/documents/三维资产标注与复核案例.pdf" target="_blank" rel="noopener">质检案例 PDF ↗</a><a href="assets/documents/关节变形与标注复核.pdf" target="_blank" rel="noopener">关节与标注 PDF ↗</a><span>下方模型可旋转、切换线框，并下载源工程。</span></p>
+    <p class="static-access">直接阅读：<a href="assets/documents/三维资产作品集.pdf" target="_blank" rel="noopener">作品集 PDF ↗</a><a href="assets/documents/三维资产标注与复核案例.pdf" target="_blank" rel="noopener">质检案例 PDF ↗</a><a href="field-test.html">进入回收行动 ↗</a><span>下方模型可旋转、切换线框，并下载源工程。</span></p>
 
     <section id="workbench" class="workbench" aria-label="交互式三维作品浏览器">
       <div class="collection-bar">
@@ -51,7 +51,7 @@
             <button type="button" data-mode="uv" aria-pressed="false" title="将检查棋盘映射到模型 UV">UV 棋盘</button>
           </div>
           <div id="canvas-host" class="canvas-host" tabindex="0" role="img" aria-label="三维模型；拖动旋转，滚轮缩放，右键平移；方向键旋转，加减键缩放，R 重置"></div>
-          <img id="fallback-preview" class="fallback-preview" src="assets/previews/kestrel_rescue_ship.jpg" alt="救援艇静态预览" hidden>
+          <img id="fallback-preview" class="fallback-preview" src="assets/previews/orbit_07.jpg" alt="航外搜救员静态预览" hidden>
           <div id="load-state" class="load-state" role="status" aria-live="polite"><div class="load-orbit" aria-hidden="true"></div><strong id="load-title">正在准备作品台</strong><p id="load-message">加载本地模型与材质</p><button id="retry-load" type="button" hidden>重新加载</button></div>
           <div class="viewer-bottom">
             <p id="mode-help" class="mode-help">拖动旋转 · 滚轮缩放 · 右键平移</p>
@@ -79,8 +79,8 @@
       <a class="experience-link" href="https://www.taptap.cn/app/985908" target="_blank" rel="noopener noreferrer"><span>织光之野<small>TapTap · PC 试玩版</small></span><span class="external-arrow" aria-hidden="true">↗</span></a>
     </section>
     <section class="project-context-grid" aria-label="作品与项目需求">
-      <article><p class="eyebrow">SPACE SURVIVOR</p><h3>太空幸存者 · 回收与撤离资产</h3><p>在生存与搜集撤离玩法开发基础上，完成回收箱、可携带能量核、维修无人机和救援艇的三维制作。箱体对应搜索与回收，能量核对应携带任务物，载具与无人机扩展救援场景的视觉表达。</p></article>
-      <article><p class="eyebrow">GROW.md</p><h3>战后整备场景与道具</h3><p>我参与了 GROW.md 的交互、代码与测试贡献。该项目获 2026“翌光计划·武汉全球高校游戏创作挑战赛”最佳技术奖。围绕其战后策略调整、战斗记录与成长机制，制作战术编辑台和战斗记录册，组织为三维整备场景。</p><a href="https://vioano.github.io/grow-md" target="_blank" rel="noopener noreferrer" class="document-link">GROW.md 项目展示 ↗</a></article>
+      <article><p class="eyebrow">SPACE SURVIVOR</p><h3>太空幸存者 · 回收与撤离资产</h3><p>在生存与搜集撤离玩法开发基础上，完成航外搜救员、荧脉孢株、回收箱、能量核、维修无人机和救援艇的三维制作。将角色的四组动作、采集物与开合箱体接入回收场景，验证移动、携带和交付。</p></article>
+      <article><p class="eyebrow">GROW.md</p><h3>战后整备场景与道具</h3><p>我参与了 GROW.md 原二维游戏版本的交互、代码优化与测试。原项目获 2026“翌光计划·武汉全球高校游戏创作挑战赛”最佳技术奖。在后续三维化版本的探索与制作中，围绕战后策略调整、战斗记录与成长机制，完成战术编辑台、战斗记录册与整备场景。</p><a href="https://vioano.github.io/grow-md" target="_blank" rel="noopener noreferrer" class="document-link">GROW.md 项目展示 ↗</a></article>
     </section>
   </main>
   <footer class="site-footer"><span>namgnal <span class="footer-separator">/</span> 三维资产作品台</span><a href="https://github.com/namgnal/blender-asset-portfolio" target="_blank" rel="noopener">公开仓库 ↗</a></footer>

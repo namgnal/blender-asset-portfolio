@@ -1,0 +1,243 @@
+{
+  "asset": "ORBIT 07 / 太空幸存者搜救员",
+  "creator": "namgnal",
+  "purpose": "太空幸存者3D玩法验证：角色移动、搜集交互与背包样本挂载。",
+  "files": [
+    {
+      "path": "assets/source/orbit_07.blend",
+      "bytes": 9126184,
+      "sha256": "1e8ced5359fb58c079426830774e9cf3204595e1eb803b36ed569f7ecdea8880"
+    },
+    {
+      "path": "assets/models/orbit_07.glb",
+      "bytes": 6863664,
+      "sha256": "20a93aa93d45b954ea5df466b39ba4cbe8b274e53bb48c8665d153b4caa3ee89"
+    }
+  ],
+  "geometry": {
+    "source_vertices": 6140,
+    "source_mesh_objects": 88,
+    "triangles": 11846,
+    "source_quads": 4886,
+    "soft_suit": {
+      "name": "Suit / continuous quad topology",
+      "vertices": 841,
+      "faces": 817,
+      "quads": 812,
+      "triangles": 1678,
+      "zero_area_geometry": 0,
+      "zero_area_uv": 0,
+      "min_uv_triangle_area": 1.4699244104576792e-05,
+      "loose_vertices": 0,
+      "boundary_edges": 0,
+      "edges_more_than_two_faces": 0,
+      "max_weight_sum_error": 2.9802322387695312e-08,
+      "max_influences": 2,
+      "unweighted_vertices": 0
+    },
+    "glb_meshes": 1,
+    "glb_material_primitives": 7,
+    "bones": 20,
+    "height_m": 1.9959999322891235,
+    "source_front_axis": "-Y",
+    "glb_front_axis": "+Z",
+    "unit": "meter",
+    "zero_area_geometry_triangles": 0,
+    "zero_area_uv_triangles": 0,
+    "max_weight_sum_error": 0.0,
+    "unweighted_vertices": 0
+  },
+  "textures": [
+    {
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_path": "textures/orbit07_basecolor.png",
+      "storage": "Packed in Blender source; embedded in GLB"
+    },
+    {
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_path": "textures/orbit07_normal.png",
+      "storage": "Packed in Blender source; embedded in GLB"
+    },
+    {
+      "size": [
+        2048,
+        2048
+      ],
+      "packed_path": "textures/orbit07_roughness.png",
+      "storage": "Packed in Blender source; embedded in GLB"
+    }
+  ],
+  "texture_workflow": "原创2K图集；Base Color、Roughness、Tangent Normal。硬件窄侧面复用中性色边带。",
+  "animation_clips": [
+    {
+      "name": "Idle",
+      "duration_seconds": 3.0,
+      "sampled_frames": 91,
+      "root_translation_max_m": 0.0,
+      "lowest_sole_m": 0.0004996496073575816,
+      "loop_max_vertex_delta_m": 6.371806540228317e-08,
+      "nominal_speed_mps": 0,
+      "measured_support_speed": {
+        "L": {
+          "interval_count": 90,
+          "backward_speed_mean": 1.2163995805069035e-08,
+          "backward_speed_std": 9.896903842183734e-07
+        },
+        "R": {
+          "interval_count": 90,
+          "backward_speed_mean": 1.2163995865206463e-08,
+          "backward_speed_std": 9.89690383669267e-07
+        }
+      }
+    },
+    {
+      "name": "Walk",
+      "duration_seconds": 1.2,
+      "sampled_frames": 37,
+      "root_translation_max_m": 0.0,
+      "lowest_sole_m": 0.000498144484278678,
+      "loop_max_vertex_delta_m": 2.1835731054649535e-07,
+      "nominal_speed_mps": 0.8,
+      "measured_support_speed": {
+        "L": {
+          "interval_count": 18,
+          "backward_speed_mean": 0.7999994990886335,
+          "backward_speed_std": 6.7253321234689695e-06
+        },
+        "R": {
+          "interval_count": 18,
+          "backward_speed_mean": 0.7999995855058933,
+          "backward_speed_std": 6.422390421407821e-06
+        }
+      }
+    },
+    {
+      "name": "Jog",
+      "duration_seconds": 0.8,
+      "sampled_frames": 25,
+      "root_translation_max_m": 0.0,
+      "lowest_sole_m": 0.0004977381573446295,
+      "loop_max_vertex_delta_m": 5.4726760479875e-08,
+      "nominal_speed_mps": 1.7,
+      "measured_support_speed": {
+        "L": {
+          "interval_count": 12,
+          "backward_speed_mean": 1.699998008526298,
+          "backward_speed_std": 1.0377599643827408e-05
+        },
+        "R": {
+          "interval_count": 12,
+          "backward_speed_mean": 1.6999979586924612,
+          "backward_speed_std": 9.503551370883192e-06
+        }
+      }
+    },
+    {
+      "name": "Interact",
+      "duration_seconds": 2.4,
+      "sampled_frames": 73,
+      "root_translation_max_m": 0.0,
+      "lowest_sole_m": 0.0004991690687275823,
+      "loop_max_vertex_delta_m": 6.371806540228317e-08,
+      "nominal_speed_mps": 0,
+      "measured_support_speed": {
+        "L": {
+          "interval_count": 72,
+          "backward_speed_mean": 1.5205289424192464e-08,
+          "backward_speed_std": 2.5858584895449977e-06
+        },
+        "R": {
+          "interval_count": 72,
+          "backward_speed_mean": 1.5205289499365083e-08,
+          "backward_speed_std": 2.5858584892996834e-06
+        }
+      }
+    }
+  ],
+  "roundtrip": {
+    "samples": 20,
+    "max_surface_vertex_error_m": 3.3101846383942757e-06,
+    "method": "Blender源工程与GLB回导后的蒙皮表面，在4动作各5个时间点做最近顶点距离比较。"
+  },
+  "attachment": {
+    "node": "SampleMount",
+    "parent_bone": "chest",
+    "purpose": "背包下部样本罐挂载"
+  },
+  "revisions": [
+    {
+      "id": "C01",
+      "finding": "拇指默认UV采到无关文字",
+      "change": "重映射到专用手套图集区域",
+      "images": [
+        "assets/cases/character/images/thumb_uv_before.jpg",
+        "assets/cases/character/images/thumb_uv_after.jpg"
+      ]
+    },
+    {
+      "id": "C02",
+      "finding": "髋周轮廓内收后形成尖角",
+      "change": "调整两圈髋周顶点，保留连续拓扑和渐变权重",
+      "images": [
+        "assets/cases/character/images/hip_shape_before.jpg",
+        "assets/cases/character/images/hip_shape_after.jpg"
+      ]
+    },
+    {
+      "id": "C03",
+      "finding": "网格合并时UV层命名不同，部分纹理坐标塌缩；窄斜面重三角化进一步暴露退化UV",
+      "change": "统一UV层名，固定护膝与终端三角化，重展开薄斜面",
+      "final_degenerate_uv_triangles": 0
+    },
+    {
+      "id": "C04",
+      "finding": "Interact手腕在阈值处旋转跳变",
+      "change": "改为连续方向插值",
+      "max_frame_rotation_before_deg": 74.8052,
+      "max_frame_rotation_after_deg": 3.74693
+    },
+    {
+      "id": "C05",
+      "finding": "支撑相足底位移为余弦曲线，与固定移动速度不一致",
+      "change": "支撑相线性后移、摆动相平滑回收，按0.8/1.7mps适配Walk/Jog"
+    },
+    {
+      "id": "C06",
+      "finding": "胸前终端与胸甲有空隙",
+      "change": "延伸终端后壳，使安装面与胸甲相交贴合",
+      "images": [
+        "assets/cases/character/images/display_mount_after.jpg"
+      ]
+    },
+    {
+      "id": "C07",
+      "finding": "肩部开孔后遗留12个孤立顶点",
+      "change": "删除孤立顶点，再执行源工程/GLB回导对照"
+    }
+  ],
+  "evidence_images": [
+    "assets/cases/character/images/hero.jpg",
+    "assets/cases/character/images/front.jpg",
+    "assets/cases/character/images/side.jpg",
+    "assets/cases/character/images/back.jpg",
+    "assets/cases/character/images/topology.jpg",
+    "assets/cases/character/images/joint_topology.jpg",
+    "assets/cases/character/images/uv_layout.jpg",
+    "assets/cases/character/images/uv_checker.jpg",
+    "assets/cases/character/images/texture_channels.jpg",
+    "assets/cases/character/images/skeleton.jpg",
+    "assets/cases/character/images/weights_thigh.jpg",
+    "assets/cases/character/images/actions_sheet.jpg"
+  ],
+  "source_hygiene": {
+    "packed_relative_textures": true,
+    "embedded_script_blocks": 0
+  },
+  "public_base_url": "https://namgnal.github.io/blender-asset-portfolio/"
+}

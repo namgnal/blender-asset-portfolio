@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "author": "namgnal",
   "defaultCollection": "orbital-rescue",
-  "defaultAsset": "kestrel_rescue_ship",
+  "defaultAsset": "orbit_07",
   "collections": [
     {
       "id": "orbital-rescue",
       "title": "太空幸存者",
       "eyebrow": "SPACE SURVIVOR",
       "status": "回收与撤离资产",
-      "description": "围绕搜集、携带与撤离机制，完成回收箱、能量核、维修无人机和救援艇。"
+      "description": "航外搜救员、异星采集物与回收设备共同组成可交互的采集撤离场景。"
     },
     {
       "id": "grow",
       "title": "GROW.md",
       "eyebrow": "AFTER THE BATTLE",
       "status": "战后整备场景与道具",
-      "description": "以策略调整、战斗记录与成长为线索，制作战术编辑台与战斗记录册，组织战后整备场景。"
+      "description": "在 GROW.md 后续三维化制作中，围绕策略调整、战斗记录与成长机制完成战术编辑台、记录册与整备场景。"
     },
     {
       "id": "tidal-station",
@@ -34,6 +34,177 @@
     }
   ],
   "assets": [
+    {
+      "id": "orbit_07",
+      "collection": "orbital-rescue",
+      "title": "ORBIT-07 航外搜救员",
+      "kind": "asset",
+      "subtitle": "太空幸存者 · 三维资产制作",
+      "purpose": "为采集、携带和撤离制作的完整角色，包含服装、护甲、背包、四组动作与样本挂点。",
+      "glb": "assets/models/orbit_07.glb",
+      "blend": "assets/source/orbit_07.blend",
+      "thumbnail": "assets/previews/orbit_07.jpg",
+      "stats": {
+        "triangles": 11846,
+        "vertices": 14891,
+        "meshes": 1,
+        "materials": 7,
+        "joints": 20,
+        "animations": 4,
+        "uvMapped": true,
+        "embeddedImages": 3,
+        "sourceVertices": 6140
+      },
+      "quality": {
+        "summary": "完整角色制作与导出复验，提供全身拓扑、图像、绑定、动作及实际修订。",
+        "checks": [
+          {
+            "label": "骨骼 / 动作",
+            "value": "20 / 4",
+            "state": "pass"
+          },
+          {
+            "label": "2K 图像贴图",
+            "value": "颜色 / 粗糙度 / 法线",
+            "state": "pass"
+          },
+          {
+            "label": "GLB 退化几何 / UV",
+            "value": "0 / 0",
+            "state": "pass"
+          },
+          {
+            "label": "源 / 回导位置误差",
+            "value": "约 0.00331 mm",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "四组原地动作；场景移动速度按支撑脚轨迹匹配。",
+          "源工程中软服为连续网格，护甲和设备按功能分件。"
+        ]
+      },
+      "evidenceUrl": "character.html",
+      "evidenceLabel": "查看制作与修订记录 ↗",
+      "camera": {
+        "azimuth": 25,
+        "elevation": 9
+      }
+    },
+    {
+      "id": "lumen_spore",
+      "collection": "orbital-rescue",
+      "title": "荧脉孢株",
+      "kind": "asset",
+      "subtitle": "太空幸存者 · 三维资产制作",
+      "purpose": "开放种囊、可辨识孢核与柔性膜叶构成异星采集物，配有循环风动和远景 LOD。",
+      "glb": "assets/models/lumen_spore.glb",
+      "blend": "assets/source/lumen_spore.blend",
+      "thumbnail": "assets/previews/lumen_spore.jpg",
+      "stats": {
+        "triangles": 7570,
+        "vertices": 5131,
+        "meshes": 47,
+        "materials": 2,
+        "joints": 3,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 4,
+        "sourceVertices": 3975
+      },
+      "quality": {
+        "summary": "膜叶、带厚度的种囊、可见孢核与循环风动，保留 UV 和结构修订记录。",
+        "checks": [
+          {
+            "label": "骨骼 / 循环",
+            "value": "3 / 4 秒",
+            "state": "pass"
+          },
+          {
+            "label": "2K 图像",
+            "value": "4 张实际嵌入图像",
+            "state": "pass"
+          },
+          {
+            "label": "几何 / UV 退化",
+            "value": "0 / 0",
+            "state": "pass"
+          },
+          {
+            "label": "源 / 回导位置误差",
+            "value": "< 0.01 mm",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "膜叶使用双面 MASK，开放边是薄片结构。",
+          "同类组织复用 UV 区域；原始和 LOD 共用图像与动作。"
+        ]
+      },
+      "evidenceUrl": "character.html#organic",
+      "evidenceLabel": "查看制作与修订记录 ↗",
+      "camera": {
+        "azimuth": 25,
+        "elevation": 9
+      }
+    },
+    {
+      "id": "lumen_spore_lod1",
+      "collection": "orbital-rescue",
+      "title": "荧脉孢株 · LOD1",
+      "kind": "asset",
+      "subtitle": "太空幸存者 · 三维资产制作",
+      "purpose": "保留主茎、种囊与叶片轮廓的远景版本，维持同一套纹理和骨骼风动。",
+      "glb": "assets/models/lumen_spore_lod1.glb",
+      "blend": "assets/source/lumen_spore_lod1.blend",
+      "thumbnail": "assets/cases/organic/images/lod1.jpg",
+      "stats": {
+        "triangles": 3587,
+        "vertices": 2495,
+        "meshes": 47,
+        "materials": 2,
+        "joints": 3,
+        "animations": 1,
+        "uvMapped": true,
+        "embeddedImages": 4,
+        "sourceVertices": 1953
+      },
+      "quality": {
+        "summary": "膜叶、带厚度的种囊、可见孢核与循环风动，保留 UV 和结构修订记录。",
+        "checks": [
+          {
+            "label": "骨骼 / 循环",
+            "value": "3 / 4 秒",
+            "state": "pass"
+          },
+          {
+            "label": "2K 图像",
+            "value": "4 张实际嵌入图像",
+            "state": "pass"
+          },
+          {
+            "label": "几何 / UV 退化",
+            "value": "0 / 0",
+            "state": "pass"
+          },
+          {
+            "label": "源 / 回导位置误差",
+            "value": "< 0.01 mm",
+            "state": "pass"
+          }
+        ],
+        "notes": [
+          "膜叶使用双面 MASK，开放边是薄片结构。",
+          "同类组织复用 UV 区域；原始和 LOD 共用图像与动作。"
+        ]
+      },
+      "evidenceUrl": "character.html#organic",
+      "evidenceLabel": "查看制作与修订记录 ↗",
+      "camera": {
+        "azimuth": 25,
+        "elevation": 9
+      }
+    },
     {
       "id": "kestrel_rescue_ship",
       "collection": "orbital-rescue",

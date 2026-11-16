@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#142b3c"><title>太空幸存者 · 回收行动</title>
+  <link rel="stylesheet" href="field-test.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <header><a href="index.html">← 三维作品台</a><span>太空幸存者 · 三维场景验证</span><a href="character.html">角色制作与检查 ↗</a></header>
+  <main>
+    <section class="mission-heading"><div><p class="chapter">ORBIT-07 / FIELD RECOVERY</p><h1>回收行动</h1></div><p>收集两处荧脉样本，带回回收箱。<br>角色、动作与交互道具在同一场景中运行。</p></section>
+    <div class="field" id="field" tabindex="0" role="application" aria-label="回收行动三维场景。WASD或方向键移动，Shift慢跑，E交互；也可点击地面移动。">
+      <div class="hud"><span id="mission-status" aria-live="polite">正在准备场景</span><span id="sample-count">样本 0 / 2</span></div>
+      <div id="loading" role="status"><strong>正在加载角色与场景</strong><p id="load-detail">读取模型和动作</p></div>
+      <div class="context"><span id="hint">靠近荧脉孢株采集样本</span><button id="interact" disabled>采集 / 交付 · E</button></div>
+      <div class="touch-move" aria-label="触屏移动"><button data-key="ArrowUp" aria-label="向前移动">↑</button><div><button data-key="ArrowLeft" aria-label="向左移动">←</button><button data-key="ArrowDown" aria-label="向后移动">↓</button><button data-key="ArrowRight" aria-label="向右移动">→</button></div></div>
+    </div>
+    <div class="controls"><p>WASD / 方向键移动 · Shift 慢跑 · E 交互 · 点击地面移动 · 拖动调整视角</p><div><button id="demo" disabled>演示一轮</button><button id="reset" disabled>重新开始</button></div></div>
+    <section class="notes"><h2>从单个资产到可操作场景</h2><p>搜救员使用待机、行走、慢跑和交互动作；荧脉孢株保留轻摆动画，采集后留下植株。样本交付时回收箱开盖，验证角色尺度、动作切换和道具状态。</p><a href="index.html?asset=orbit_07#workbench">单独查看角色、线框与源工程 ↗</a></section>
+  </main><script type="module" src="field-test.js"></script>
+</body></html>

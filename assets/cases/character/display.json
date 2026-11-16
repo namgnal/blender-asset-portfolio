@@ -1,0 +1,219 @@
+{
+  "hero": "assets/cases/character/images/hero.jpg",
+  "summary": "为太空幸存者的搜集与撤离玩法制作完整搜救员：头盔、软服、护甲、终端、腰包与背包形成统一的工作装备。完成网格、UV、图像贴图、绑定和四组动作，并接入采集与交付场景。",
+  "facts": [
+    "11,846 三角形",
+    "20 根骨骼",
+    "4 组动作",
+    "3 张 2K 图像",
+    "Blender / GLB"
+  ],
+  "sections": [
+    {
+      "id": "topology",
+      "title": "连续拓扑与 UV 图集",
+      "text": "软服保留 841 个顶点、812 个四边形，肩肘与髋膝周围设置变形环线。头盔、护甲和设备按功能分件。图集组织服装、编号、护甲及设备区域，重复部件复用对应材质。",
+      "images": [
+        {
+          "src": "assets/cases/character/images/joint_topology.jpg",
+          "caption": "肩、肘、髋与膝的源网格环线",
+          "width": 1400,
+          "height": 1300
+        },
+        {
+          "src": "assets/cases/character/images/uv_layout.jpg",
+          "caption": "实际 UV 布局与图集分区",
+          "width": 1728,
+          "height": 1800
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "图像贴图与材质",
+      "text": "颜色图使用 sRGB；粗糙度与切线空间法线按非颜色数据接入材质。棋盘检查局部尺度与方向，结合原材质查看缝线、护具、编号与终端。",
+      "images": [
+        {
+          "src": "assets/cases/character/images/texture_channels.jpg",
+          "caption": "颜色、粗糙度与法线三个图像通道",
+          "width": 1800,
+          "height": 668
+        },
+        {
+          "src": "assets/cases/character/images/uv_checker.jpg",
+          "caption": "角色 UV 棋盘检查",
+          "width": 1200,
+          "height": 1500
+        }
+      ]
+    },
+    {
+      "id": "rig",
+      "title": "绑定与四组动作",
+      "text": "连续软服跨关节使用渐变权重，硬质设备跟随对应骨骼。按实际姿态检查轮廓、脚底与部件连接。行走和慢跑的支撑阶段采用近线性后移，场景速度同步匹配角色比例。",
+      "images": [
+        {
+          "src": "assets/cases/character/images/skeleton.jpg",
+          "caption": "20 根骨骼及角色结构",
+          "width": 1200,
+          "height": 1500
+        },
+        {
+          "src": "assets/cases/character/images/weights_thigh.jpg",
+          "caption": "腿部渐变权重",
+          "width": 1200,
+          "height": 1500
+        },
+        {
+          "src": "assets/cases/character/images/actions_sheet.jpg",
+          "caption": "待机、行走、慢跑与交互关键姿态",
+          "width": 1800,
+          "height": 633
+        }
+      ],
+      "table": {
+        "heads": [
+          "动作",
+          "时长",
+          "检查重点"
+        ],
+        "rows": [
+          [
+            "Idle",
+            "3.0 s",
+            "轻微呼吸，脚底稳定"
+          ],
+          [
+            "Walk",
+            "1.2 s",
+            "支撑脚后移约 0.8 m/s"
+          ],
+          [
+            "Jog",
+            "0.8 s",
+            "支撑脚后移约 1.7 m/s"
+          ],
+          [
+            "Interact",
+            "2.4 s",
+            "伸手、回收及手腕连续性"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "在场景中操作角色 ↗",
+          "href": "field-test.html"
+        }
+      ]
+    },
+    {
+      "id": "revision",
+      "title": "制作中的实际修订",
+      "text": "修顺髋部外扩折角，重新映射拇指 UV，补齐终端底座并细化护膝。检查 GLB 时发现合并网格的 UV 层名称不一致，统一后继续修复护膝重三角化产生的退化 UV。最终源文件与导出模型分别核对。",
+      "images": [
+        {
+          "src": "assets/cases/character/images/hip_shape_before.jpg",
+          "caption": "髋部修订前",
+          "width": 1100,
+          "height": 1000
+        },
+        {
+          "src": "assets/cases/character/images/hip_shape_after.jpg",
+          "caption": "髋部修订后",
+          "width": 1100,
+          "height": 1000
+        },
+        {
+          "src": "assets/cases/character/images/thumb_uv_before.jpg",
+          "caption": "拇指 UV 修订前",
+          "width": 1100,
+          "height": 1000
+        },
+        {
+          "src": "assets/cases/character/images/thumb_uv_after.jpg",
+          "caption": "拇指 UV 修订后",
+          "width": 1100,
+          "height": 1000
+        }
+      ],
+      "table": {
+        "heads": [
+          "检查",
+          "结果"
+        ],
+        "rows": [
+          [
+            "最终 GLB 几何 / UV 退化",
+            "均为 0"
+          ],
+          [
+            "源工程孤立顶点",
+            "清理 12 个，最终为 0"
+          ],
+          [
+            "交互动作手腕逐帧转角",
+            "最大值约 74.8° → 3.75°"
+          ],
+          [
+            "20 组时间点源 / 回导位置",
+            "最大差约 0.00331 mm"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "完整检测与修订记录 ↗",
+          "href": "assets/cases/character/checks.json"
+        }
+      ]
+    },
+    {
+      "id": "organic",
+      "title": "荧脉孢株：有机结构与采集用途",
+      "text": "弯曲主茎、带厚度的种囊、孢核和透明膜叶构成异星资源。四张 2K 图像配合三骨骼风动；原始 7,570 三角形，LOD1 为 3,587 三角形。膜叶边界按薄片用途判断，种囊则检查壁厚与内腔。",
+      "images": [
+        {
+          "src": "assets/cases/organic/images/hero.jpg",
+          "caption": "原始细节版本",
+          "width": 1600,
+          "height": 1500
+        },
+        {
+          "src": "assets/cases/organic/images/lod1.jpg",
+          "caption": "同视角 LOD1",
+          "width": 1600,
+          "height": 1500
+        },
+        {
+          "src": "assets/cases/organic/images/spore_before.jpg",
+          "caption": "主茎末端遮挡孢囊的实际问题",
+          "width": 1400,
+          "height": 1200
+        },
+        {
+          "src": "assets/cases/organic/images/spore_detail.jpg",
+          "caption": "收回主茎后，内腔与孢核更清楚",
+          "width": 1400,
+          "height": 1200
+        },
+        {
+          "src": "assets/cases/organic/images/uv_revision.jpg",
+          "caption": "Membrane_01：UV 拉伸 p95 指标 12.44 → 1.65",
+          "width": 1800,
+          "height": 750
+        }
+      ],
+      "links": [
+        {
+          "label": "交互查看植株与风动 ↗",
+          "href": "index.html?asset=lumen_spore#workbench"
+        },
+        {
+          "label": "植株检查记录 ↗",
+          "href": "assets/cases/organic/checks.json"
+        }
+      ]
+    }
+  ]
+}
