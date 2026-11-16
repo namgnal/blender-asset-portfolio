@@ -34,7 +34,8 @@ async function renderJoint() {
     for (const item of data.findings) {const d=make('div');d.append(make('strong',item.title),make('p',item.text));summary.append(d);}
     const links=make('div',undefined,'case-links');
     for(const item of data.downloads)links.append(link(item.label,item.href,item.download));
-    host.replaceChildren(gallery,make('p',data.description,'joint-caption'),summary,links,make('p',data.scope,'scope-note'));
+    host.replaceChildren(gallery,make('p',data.description,'joint-caption'),summary,links);
+    if(data.scope)host.append(make('p',data.scope,'scope-note'));
   } catch (error) {
     console.error(error);showError(host,'关节材料暂时未能读取。',url);
   }

@@ -16,9 +16,8 @@
   </header>
   <main>
     <section class="review-intro">
-      <p class="eyebrow">PRODUCTION / INSPECTION / DEFORMATION / REVIEW</p>
-      <h1>从资产，到可核查的交付<span class="title-dot">.</span></h1>
-      <p>说明制作约束，定位具体问题，保留处理依据与复验结果。<br>每个案例都可以继续查看模型、图像或源文件。</p>
+      <h1>资产制作与质量检查<span class="title-dot">.</span></h1>
+      <p>模型、检查过程和修订结果。<br>查看对应图片，或打开源工程继续检查。</p>
       <div class="intro-downloads"><a href="assets/documents/三维资产作品集.pdf" target="_blank" rel="noopener">作品集 PDF ↗</a><a href="assets/documents/三维资产标注与复核案例.pdf" target="_blank" rel="noopener">专项质检 PDF ↗</a></div>
     </section>
     <nav class="case-nav" aria-label="技术案例目录"><a href="#production">低模与资产制作</a><a href="#inspection">源模型质检</a><a href="#deformation">关节与动作</a><a href="#annotation">标注与复核</a></nav>
@@ -30,20 +29,18 @@
         <article class="visual-case"><a href="index.html?asset=reed_patch#workbench"><img src="assets/previews/reed_patch.jpg" alt="弯曲薄片芦苇植被" loading="lazy" width="1400" height="1100"><h3>薄片芦苇</h3></a><p class="metric">1,872 <span>→</span> 610 <small>三角形</small></p><p>用弯曲叶片与双面材质组织植被。检查开放边时，先区分叶片用途与实体缺面。</p><div class="case-links"><a href="index.html?asset=reed_patch#workbench">查看原版 ↗</a><a href="index.html?asset=reed_patch_lod1#workbench">查看 LOD ↗</a></div></article>
         <article class="visual-case"><a href="index.html?asset=rescue_supply_crate#workbench"><img src="assets/previews/rescue_supply_crate.jpg" alt="密封回收箱" loading="lazy" width="1400" height="1050"><h3>密封回收箱</h3></a><p class="metric">5,858 <small>三角形 · 开合动画</small></p><p>真实内仓、密封边、铰链与铭牌。把可开合、可容纳任务物的要求落实到结构。</p><div class="case-links"><a href="index.html?asset=rescue_supply_crate#workbench">查看模型与动画 ↗</a><a href="#inspection">查看质检 ↓</a></div></article>
       </div>
-      <p class="scope-note">不同资产采用不同的细节预算。GROW.md 战后整备道具侧重近景材质与结构，低模与 LOD 能力在上述环境资产中单独展示。</p>
     </section>
 
     <section id="inspection" class="case-section">
       <div class="case-heading"><div><p class="eyebrow">SOURCE MODEL INSPECTION</p><h2>法线问题，定位到箱盖字样</h2></div><p>密封回收箱<br>发现 → 修订 → 导出回读</p></div>
-      <div class="evidence-split"><figure><a href="assets/cases/crate_normals.png" target="_blank" rel="noopener"><img src="assets/cases/crate_normals.png" alt="回收箱局部字样法线修订前后诊断图" loading="lazy" width="1200" height="850"></a><figcaption>下排为源复制件，上排为修订件；红色为诊断覆盖。点击查看大图。</figcaption></figure><div class="finding-copy"><h3>整体闭合，也可能存在局部面方向问题</h3><dl class="case-dl"><dt>发现</dt><dd>箱盖浮雕字样位置焊接后，存在 342 条相邻面同向边。</dd><dt>处理</dt><dd>局部焊接、重算法线，采用硬表面平直法线；不改动箱体其他部件。</dd><dt>复验</dt><dd>回导后同向邻接边为 0；整箱仍为 5,858 三角形，字样 UV 无塌缩。</dd><dt>进一步检查</dt><dd>分别核对铭牌图像、UV 映射和箱盖开合，避免一项通过替代其他检查。</dd></dl><a class="text-link" href="index.html?asset=rescue_supply_crate#workbench">打开修订后模型与源工程 ↗</a></div></div>
-      <div class="detail-band"><figure><a href="assets/cases/crate_uv.png" target="_blank" rel="noopener"><img src="assets/cases/crate_uv.png" alt="回收箱铭牌图像贴图与UV对应检查" loading="lazy" width="2208" height="800"></a><figcaption>图像、UV 与实际表面对应</figcaption></figure><div><h3>贴图链路单独验证</h3><p>铭牌表面 0.54 × 0.21 m，对应 1,280 × 496 px 图像；颜色接入 Base Color。源图与 GLB 内嵌图逐像素一致，像素空间拉伸比为 1.0036。</p><p>这些结果支持该铭牌的检查结论，不替代整个资产所有 UV 或贴图通道的验收。</p><a class="text-link" href="#annotation">查看对应标注记录 ↓</a></div></div>
-      <p class="scope-note">更多几何、UV、角色关节及开放边案例见专项质检 PDF。随附个人新作源工程，可继续检查网格、材质与动作。</p>
+      <div class="evidence-split"><figure><a href="assets/cases/crate_normals.png" target="_blank" rel="noopener"><img src="assets/cases/crate_normals.png" alt="回收箱局部字样法线修订前后诊断图" loading="lazy" width="1200" height="850"></a><figcaption>下排为源复制件，上排为修订件；红色为诊断覆盖。点击查看大图。</figcaption></figure><div class="finding-copy"><h3>整体闭合，也可能存在局部面方向问题</h3><dl class="case-dl"><dt>发现</dt><dd>箱盖浮雕字样位置焊接后，存在 342 条相邻面同向边。</dd><dt>处理</dt><dd>局部焊接、重算法线，采用硬表面平直法线。</dd><dt>复验</dt><dd>回导后同向邻接边为 0；整箱仍为 5,858 三角形，字样 UV 无塌缩。</dd><dt>进一步检查</dt><dd>核对铭牌图像、UV 映射及箱盖开合。</dd></dl><a class="text-link" href="index.html?asset=rescue_supply_crate#workbench">打开修订后模型与源工程 ↗</a></div></div>
+      <div class="detail-band"><figure><a href="assets/cases/crate_uv.png" target="_blank" rel="noopener"><img src="assets/cases/crate_uv.png" alt="回收箱铭牌图像贴图与UV对应检查" loading="lazy" width="2208" height="800"></a><figcaption>图像、UV 与实际表面对应</figcaption></figure><div><h3>贴图链路单独验证</h3><p>铭牌表面 0.54 × 0.21 m，对应 1,280 × 496 px 图像；颜色接入 Base Color。源图与 GLB 内嵌图逐像素一致，像素空间拉伸比为 1.0036。</p><a class="text-link" href="#annotation">查看对应标注记录 ↓</a></div></div>
 
       <div class="support-revision" id="support-revision">
         <h3>从使用要求复查：支架不应遮住屏幕</h3>
         <p>贴图和开放边检查之外，进一步发现两根支杆遮住终端下方文字。将支架移至屏幕后侧 65 mm，保留底座与后壳的连接；几何、UV 和材质保持一致。</p>
         <div class="joint-gallery"><figure><a href="assets/cases/support/support_before_front.png" target="_blank" rel="noopener"><img src="assets/cases/support/support_before_front.png" alt="支架修订前遮挡屏幕下方" width="1400" height="900" loading="lazy"></a><figcaption>修订前：两根支杆位于显示面前。</figcaption></figure><figure><a href="assets/cases/support/support_after_front.png" target="_blank" rel="noopener"><img src="assets/cases/support/support_after_front.png" alt="支架修订后屏面可读" width="1400" height="900" loading="lazy"></a><figcaption>修订后：移至后侧，恢复屏面可读性。</figcaption></figure></div>
-        <p>正对屏面 100 × 60 点采样中，被支杆遮挡的点由 154 降至 0。战术台及组合场景都应用修订；该检查专门验证屏面遮挡。</p>
+        <p>正对屏面 100 × 60 点采样中，被支杆遮挡的点由 154 降至 0。战术台及组合场景都应用修订。</p>
         <div class="case-links"><a href="assets/cases/support/support_after_rear_connection.png" target="_blank" rel="noopener">查看后侧连接 ↗</a><a href="assets/cases/support/checks.json" download>查看修订检查记录 ↓</a><a href="index.html?asset=tactical_workbench#workbench">打开修订后战术台 ↗</a></div>
       </div>
     </section>
@@ -56,15 +53,14 @@
 
     <section id="annotation" class="case-section">
       <div class="case-heading"><div><p class="eyebrow">ANNOTATION & REVIEW</p><h2>让每条结论都有依据</h2></div><p>个人资产质检样例<br>对象、规则、证据与复核记录</p></div>
-      <p class="section-lede">同一套记录格式，保留不同的处理结果：真实缺陷需要修订，预期薄片需要结合用途判断，证据不足时保留待核实项。这组自建样例展示我的记录方法。</p>
+      <p class="section-lede">四条自建记录覆盖局部修订、贴图确认、用途判定和缺面退回，保留对应对象、证据与处理结果。</p>
       <div class="annotation-toolbar"><span id="annotation-summary">正在读取标注记录</span><a href="assets/cases/annotation/records.json" download>下载完整 JSON ↓</a><a href="assets/cases/annotation/rules.json" download>查看规则与范围 ↓</a></div>
       <div id="annotation-records" class="annotation-records" aria-live="polite"></div>
-      <p class="scope-note">自建资产质检样例，采用自拟规则与统一记录格式。平台三维评估经历另见项目介绍。</p>
     </section>
 
     <section class="review-end"><h2>继续查看可编辑的作品</h2><p>在线浏览 GLB，也可以下载对应 Blender 源工程，检查网格、材质和动作。</p><a href="index.html#workbench">返回交互作品台 ↗</a></section>
   </main>
-  <footer class="site-footer"><span>namgnal / 三维资产作品台</span><span>制作、判断与交付。</span></footer>
+  <footer class="site-footer"><span>namgnal / 三维资产作品台</span><a href="https://github.com/namgnal/blender-asset-portfolio" target="_blank" rel="noopener">公开仓库 ↗</a></footer>
   <script src="review.js" defer></script>
 </body>
 </html>
