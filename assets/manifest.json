@@ -1,6 +1,6 @@
 {
   "author": "namgnal",
-  "release": "2026-11-17-v7",
+  "release": "2026-11-17-v8",
   "files": [
     {
       "path": ".gitattributes",
@@ -248,6 +248,51 @@
       "sha256": "42b1a825b775d3b67ac37c08b8c5e77d6df07afff3bd3f83b4239c34743ca0d7"
     },
     {
+      "path": "assets/cases/lightweaver/capsule_hero.jpg",
+      "bytes": 185169,
+      "sha256": "719a91dd5f4516d82ea5570c3dc84d2685357d50d6f9a058d3ca7a2efa3a4b42"
+    },
+    {
+      "path": "assets/cases/lightweaver/capsule_uv.jpg",
+      "bytes": 190649,
+      "sha256": "58365f061976f8243e3438a1312b162a44adbad1d8078c4b27e394b21ae075a0"
+    },
+    {
+      "path": "assets/cases/lightweaver/character_actions.jpg",
+      "bytes": 253831,
+      "sha256": "546469d53e87e4abed9a22892819f3a69e3529f6ca4fb345d26fbdbcb3ac650c"
+    },
+    {
+      "path": "assets/cases/lightweaver/character_hero.jpg",
+      "bytes": 172542,
+      "sha256": "e26070ca11288c76e309c79357e6d873f3ccaf6530ec352e7ce97cb78554a903"
+    },
+    {
+      "path": "assets/cases/lightweaver/clamp_hero.jpg",
+      "bytes": 166470,
+      "sha256": "2a896c0e7ae612a95d6c002f6666887fa0da4d139faa5821d611b4a8c80fe081"
+    },
+    {
+      "path": "assets/cases/lightweaver/game_hero.jpg",
+      "bytes": 124322,
+      "sha256": "88fe4e150bf6e441ffdb19fc168464dde5f681e37160e089340b516ad06c0535"
+    },
+    {
+      "path": "assets/cases/lightweaver/lamp_hero.jpg",
+      "bytes": 211556,
+      "sha256": "bcb6b718685279bb4c2aa584aee904be03521c9f835f2042c9548469a719e7d1"
+    },
+    {
+      "path": "assets/cases/lightweaver/wave_after.jpg",
+      "bytes": 169885,
+      "sha256": "0e383e3f8ec0801d7c39f88ddc438dbadcb07a04a1ee92bac8f9cacc46c2fbf1"
+    },
+    {
+      "path": "assets/cases/lightweaver/wave_before.jpg",
+      "bytes": 165388,
+      "sha256": "0dc3909a7a24ed61996b1be13061dd8a5af88c305285f06695618583517df758"
+    },
+    {
       "path": "assets/cases/organic/checks.json",
       "bytes": 77929,
       "sha256": "814f47c304f4d4a1a93db2a5bba00d446bdb0e96eef4dde4926e50775738a24a"
@@ -339,13 +384,13 @@
     },
     {
       "path": "assets/documents/三维资产作品集.pdf",
-      "bytes": 4159236,
-      "sha256": "aa66075cdff8672b825b80feac18016971f08e3a891757c5190fffafecc95cd8"
+      "bytes": 5273389,
+      "sha256": "ccd70c6d3321372b3b2ec6c244b6bdf1508a08db3ad3d23924f9621bb03796bc"
     },
     {
       "path": "assets/documents/三维资产标注与复核案例.pdf",
-      "bytes": 4676192,
-      "sha256": "00dd0e64b186e0f67ab663acc265b4bf359436a3244370bf5e5eda7f6f60e581"
+      "bytes": 5352107,
+      "sha256": "0d2d30c023fbcdae54953321807ec5ec8655132bb61ab73eb7cc00b7a3c9cf8b"
     },
     {
       "path": "assets/documents/关节变形与标注复核.pdf",
@@ -659,8 +704,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11557,
-      "sha256": "7eccaa85f8f6bd1a48d85a5a02385a76d03bf1521bdf132ebd386b8cfed6fa74"
+      "bytes": 11826,
+      "sha256": "7c2b23f99dcf44abe5d1451d4fa60b2a005abd2b269ad9e4b25061d9198ad465"
     },
     {
       "path": "LICENSE-code.txt",
@@ -668,9 +713,19 @@
       "sha256": "d18a8a82691bc149fb210cb65d47da17cfb441559e800730f966734132b2944e"
     },
     {
+      "path": "lightweaver.css",
+      "bytes": 3499,
+      "sha256": "2a75bc548657bc5bd63067c55fc0824a560b8902661213611bbd5e435aefa898"
+    },
+    {
+      "path": "lightweaver.html",
+      "bytes": 8726,
+      "sha256": "b4d54ab179ee8d0209e717ba795caeeef9eb1ca9e0b9e9eb46836c4b9b46bb6e"
+    },
+    {
       "path": "README.md",
-      "bytes": 1874,
-      "sha256": "80f8d223d5da4a3712d3d948f3671af1b49f474cbb2b1c4bb49e607c387cb803"
+      "bytes": 2013,
+      "sha256": "295e68b0e41ca4d00c28a8454e715dc3dd8a4591cd6023ea5d71080266ab3d3c"
     },
     {
       "path": "review.css",
@@ -679,8 +734,8 @@
     },
     {
       "path": "review.html",
-      "bytes": 9606,
-      "sha256": "fbbdd6c1ee6cd04eb121921f81fcae4d7be937feb9a9c9f457e5917b27cece53"
+      "bytes": 10020,
+      "sha256": "ab776f6f1546995aafc5f65a9e4ce93af39aec8a1b347dfc0772cf591d0d7fb5"
     },
     {
       "path": "review.js",
