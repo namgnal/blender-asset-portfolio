@@ -1,6 +1,6 @@
 {
   "author": "namgnal",
-  "release": "2026-11-17-v6",
+  "release": "2026-11-17-v7",
   "files": [
     {
       "path": ".gitattributes",
@@ -339,8 +339,8 @@
     },
     {
       "path": "assets/documents/三维资产作品集.pdf",
-      "bytes": 4011784,
-      "sha256": "5d86b61fc1cda2e09222db9392989ee906a75ce26ba7a8b4d78e00975e88afa0"
+      "bytes": 4159236,
+      "sha256": "aa66075cdff8672b825b80feac18016971f08e3a891757c5190fffafecc95cd8"
     },
     {
       "path": "assets/documents/三维资产标注与复核案例.pdf",
@@ -659,8 +659,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11471,
-      "sha256": "b33247687860f6f8d9dd50afcb9aed80b825b359edb650594078acbbfbc3f62e"
+      "bytes": 11557,
+      "sha256": "7eccaa85f8f6bd1a48d85a5a02385a76d03bf1521bdf132ebd386b8cfed6fa74"
     },
     {
       "path": "LICENSE-code.txt",
